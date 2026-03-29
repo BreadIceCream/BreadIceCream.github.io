@@ -1,4 +1,4 @@
-Current phase: implementing
+Current phase: implementation_done
 Active sprint: S005
 Current scope: TODO-023, TODO-024, TODO-025, TODO-026, TODO-027, TODO-028
 
@@ -14,4 +14,7 @@ Open issues:
 - %SystemDrive%/ remains in workspace and must stay untouched
 
 Next recommended step:
-- Finalize generator_notes with commit hash, set phase to implementation_done, and hand off S005 to evaluator
+- Evaluator should verify CHECK-501 to CHECK-508 and confirm dynamic_effects.md mapping is materially present while the page stays premium and restrained.
+
+Implementation commit:
+- e73e7cebe4d86ea00ef16f270f244b84984ec3a2
