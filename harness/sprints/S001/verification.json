@@ -1,0 +1,35 @@
+{
+  "sprint_id": "S001",
+  "checks": [
+    {
+      "id": "CHECK-001",
+      "description": "A standard frontend project structure and dependency manifest exist in the repository root.",
+      "type": "artifact"
+    },
+    {
+      "id": "CHECK-002",
+      "description": "The documented development command starts the project locally or is otherwise verifiably runnable.",
+      "type": "runtime"
+    },
+    {
+      "id": "CHECK-003",
+      "description": "The homepage includes hero, about, projects, and contact coverage with usable navigation targets.",
+      "type": "ui"
+    },
+    {
+      "id": "CHECK-004",
+      "description": "The layout remains usable on mobile and desktop widths without obvious blocking issues.",
+      "type": "responsive"
+    },
+    {
+      "id": "CHECK-005",
+      "description": "Semantic structure, keyboard reachability, and readable contrast are addressed at a basic level.",
+      "type": "accessibility"
+    },
+    {
+      "id": "CHECK-006",
+      "description": "The %SystemDrive% directory was left untouched during Sprint S001.",
+      "type": "safety"
+    }
+  ]
+}

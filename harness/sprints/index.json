@@ -1,0 +1,19 @@
+[
+  {
+    "sprint_id": "S001",
+    "title": "First runnable personal homepage",
+    "status": "implemented_pending_evaluation",
+    "goal": "Move the repository from empty state to a runnable single-page personal homepage foundation.",
+    "created_by": "planner",
+    "created_at": "2026-03-29T15:05:00+08:00",
+    "path": "harness/sprints/S001",
+    "scope_todo_ids": [
+      "TODO-001",
+      "TODO-002",
+      "TODO-003",
+      "TODO-004",
+      "TODO-005",
+      "TODO-006"
+    ]
+  }
+]

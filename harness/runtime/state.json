@@ -1,0 +1,19 @@
+{
+  "project_id": "personal-homepage",
+  "phase": "implementation",
+  "status": "ready_for_evaluation",
+  "active_sprint": "S001",
+  "last_updated_at": "2026-03-29T15:14:29+08:00",
+  "last_updated_by": "generator",
+  "current_scope": [
+    "TODO-001",
+    "TODO-002",
+    "TODO-003",
+    "TODO-004",
+    "TODO-005",
+    "TODO-006"
+  ],
+  "last_commit": null,
+  "last_evaluation": null,
+  "resume_from": "Evaluator should validate S001 outputs, confirm runtime and UI checks, and verify %SystemDrive% remained untouched."
+}

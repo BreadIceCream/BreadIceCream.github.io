@@ -1,0 +1,62 @@
+# Sprint S001 Contract
+
+## Goal
+
+Deliver the first runnable version of a single-page personal homepage from an effectively empty repository.
+
+## In Scope
+
+- Initialize a frontend project scaffold in the repository root
+- Create a single-page homepage with navigation, hero, about, projects, and contact coverage
+- Define the initial design baseline and reusable style system
+- Use placeholder content and valid CTA or anchor targets
+- Provide basic responsive and accessibility-conscious behavior
+- Document local run instructions and remaining user content gaps
+
+## Out Of Scope
+
+- Backend services or APIs
+- CMS integration
+- Blog or article system
+- Authentication, analytics, or database work
+- Changing or deleting the existing `%SystemDrive%` directory
+- Final production content and assets
+
+## Implementation Rules
+
+- Do not write or modify files inside `harness/` except the required sprint artifacts and progress updates
+- Do not touch the `%SystemDrive%` directory
+- Keep the site single-page for Sprint S001
+- Prefer a static-friendly frontend stack and keep content local to the repo
+- Use placeholder content where user-provided copy or assets are unavailable
+- Do not broaden scope beyond the six in-scope backlog items
+
+## Delivery Metrics
+
+- Repository contains a runnable frontend project with standard local start commands
+- Homepage visibly includes hero, about, projects, and contact sections
+- Design baseline is coherent across the page and not raw framework default styling
+- README or equivalent explains how to run the project locally
+
+## Verification Metrics
+
+- Generator provides a commit hash and updates `generator_notes.md`
+- Evaluator can confirm the homepage builds or runs locally with documented commands
+- Evaluator can confirm the required sections and navigation targets exist
+- Evaluator can confirm responsive behavior has no obvious blocking breakage
+- Evaluator can confirm `%SystemDrive%` was not modified
+
+## Required Artifacts
+
+- Updated `todos.json`
+- Updated `progress.txt`
+- `generator_notes.md`
+- `evaluator_report.md`
+- Git commit hash
+
+## Exit Criteria
+
+- All six S001 backlog items are implemented or explicitly deferred with reason
+- The app starts with documented commands
+- The single-page homepage is navigable and visibly complete with placeholder content
+- Sprint artifacts are updated for fresh-context continuation

@@ -1,0 +1,105 @@
+[
+  {
+    "id": "TODO-001",
+    "title": "Initialize a frontend app scaffold for the personal homepage",
+    "status": "done",
+    "priority": "high",
+    "sprint_id": "S001",
+    "type": "setup",
+    "summary": "Create the project scaffold, dependency manifest, and runnable dev scripts for a single-page personal homepage.",
+    "acceptance_criteria": [
+      "A standard frontend project structure exists in the repository root",
+      "The repo contains package metadata and a documented local start command",
+      "No application code is placed under the harness directory"
+    ],
+    "depends_on": []
+  },
+  {
+    "id": "TODO-002",
+    "title": "Establish the homepage information architecture and section skeleton",
+    "status": "done",
+    "priority": "high",
+    "sprint_id": "S001",
+    "type": "feature",
+    "summary": "Create the single-page structure for navigation, hero, about, projects, experience or education, contact, and footer.",
+    "acceptance_criteria": [
+      "The homepage contains at least hero, about, projects, and contact sections",
+      "Section anchors or navigation targets exist for the visible sections",
+      "The layout is coherent on desktop and mobile widths"
+    ],
+    "depends_on": [
+      "TODO-001"
+    ]
+  },
+  {
+    "id": "TODO-003",
+    "title": "Define the initial visual baseline and reusable styling tokens",
+    "status": "done",
+    "priority": "medium",
+    "sprint_id": "S001",
+    "type": "design",
+    "summary": "Set the typography, palette, spacing, and core surface treatments for a professional personal homepage.",
+    "acceptance_criteria": [
+      "Global styles or theme tokens are defined in a central location",
+      "The homepage uses a consistent visual system across sections",
+      "The design direction is intentionally minimal and professional rather than placeholder-default"
+    ],
+    "depends_on": [
+      "TODO-001"
+    ]
+  },
+  {
+    "id": "TODO-004",
+    "title": "Populate the first version with placeholder content and working CTA targets",
+    "status": "done",
+    "priority": "medium",
+    "sprint_id": "S001",
+    "type": "content",
+    "summary": "Use placeholder profile, project, and contact content so the generator can deliver a fully navigable first version before real copy arrives.",
+    "acceptance_criteria": [
+      "No major section is left visually empty",
+      "Buttons and links point to valid placeholders, anchors, or external targets",
+      "Text clearly signals where the user must later replace placeholder content"
+    ],
+    "depends_on": [
+      "TODO-002",
+      "TODO-003"
+    ]
+  },
+  {
+    "id": "TODO-005",
+    "title": "Add baseline accessibility and responsive behavior",
+    "status": "done",
+    "priority": "medium",
+    "sprint_id": "S001",
+    "type": "quality",
+    "summary": "Ensure semantic structure, keyboard-reachable navigation, readable contrast, and mobile-friendly layout behavior.",
+    "acceptance_criteria": [
+      "Semantic landmarks and heading hierarchy are present",
+      "Navigation and primary CTA controls are keyboard reachable",
+      "No obvious layout breakage appears at narrow mobile width"
+    ],
+    "depends_on": [
+      "TODO-002",
+      "TODO-003"
+    ]
+  },
+  {
+    "id": "TODO-006",
+    "title": "Update repository instructions for generator handoff and local run",
+    "status": "done",
+    "priority": "medium",
+    "sprint_id": "S001",
+    "type": "docs",
+    "summary": "Document how to run the app locally and capture any assumptions that remain unresolved after Sprint S001.",
+    "acceptance_criteria": [
+      "README or equivalent contains the install and dev commands",
+      "Remaining content or asset gaps are explicitly called out",
+      "The repository can be resumed by a fresh-context agent"
+    ],
+    "depends_on": [
+      "TODO-001",
+      "TODO-002"
+    ]
+  }
+]
