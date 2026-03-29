@@ -13,11 +13,15 @@ const commandButtons = Array.from(document.querySelectorAll("[data-command]"));
 const textScanTargets = Array.from(document.querySelectorAll("h1, h2, h3, p, li, .btn, .site-nav a"));
 const interestsSection = document.querySelector("#interests");
 const interestsCanvas = document.querySelector("[data-interests-canvas]");
+const fieldPoints = document.querySelector("[data-field-points]");
 const interestsNodes = Array.from(document.querySelectorAll("[data-interest-node]"));
 const cityButtons = Array.from(document.querySelectorAll("[data-city]"));
 const interestSignal = document.querySelector("[data-interest-signal]");
 const interestStatus = document.querySelector("[data-interest-status]");
 const focusLens = document.querySelector("[data-focus-lens]");
+const formulaA = document.querySelector("[data-formula-a]");
+const formulaR = document.querySelector("[data-formula-r]");
+const formulaT = document.querySelector("[data-formula-t]");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (yearNode) {
@@ -169,6 +173,25 @@ function setupHeroOrb() {
   requestAnimationFrame(loop);
 }
 
+function setupFieldPoints() {
+  if (!fieldPoints) {
+    return;
+  }
+
+  const total = 90;
+  for (let i = 0; i < total; i += 1) {
+    const point = document.createElement("span");
+    point.className = "field-point";
+    if (i % 3 === 0) {
+      point.classList.add("micro");
+    }
+    point.style.left = `${4 + Math.random() * 92}%`;
+    point.style.top = `${8 + Math.random() * 84}%`;
+    point.style.opacity = `${0.46 + Math.random() * 0.5}`;
+    fieldPoints.appendChild(point);
+  }
+}
+
 function streamMessage(text) {
   if (!commandStream) {
     return;
@@ -222,6 +245,17 @@ function applyInterestMode(mode) {
     };
     interestStatus.textContent = labelMap[mode] || "mode://travel -> route tracing online";
   }
+}
+
+function getInterestProgress() {
+  if (!interestsSection) {
+    return 0;
+  }
+  const rect = interestsSection.getBoundingClientRect();
+  const start = window.innerHeight * 0.86;
+  const end = -rect.height * 0.3;
+  const progress = (start - rect.top) / (start - end);
+  return Math.max(0, Math.min(1, progress));
 }
 
 function executeCommand(raw) {
@@ -312,6 +346,14 @@ function setupInterestsInteractions() {
       focusLens.style.top = "50%";
     });
   }
+
+  const updateFocusBlur = () => {
+    const progress = getInterestProgress();
+    const blur = (1 - progress) * 12;
+    interestsCanvas.style.setProperty("--focus-blur", `${blur.toFixed(2)}px`);
+  };
+  updateFocusBlur();
+  window.addEventListener("scroll", updateFocusBlur, { passive: true });
 }
 
 function setupInterestSignal() {
@@ -325,26 +367,26 @@ function setupInterestSignal() {
     const height = 180;
     const points = [];
     let baseline = 96;
-    let amplitude = 14;
-    let frequency = 2.2;
+    let amplitude = 22;
+    let frequency = 2.3;
 
     if (mode === "music") {
       baseline = 92;
-      amplitude = 19;
-      frequency = 4.2;
+      amplitude = 30;
+      frequency = 5.8;
     } else if (mode === "finance") {
-      baseline = 106;
-      amplitude = 10;
-      frequency = 2.1;
+      baseline = 112;
+      amplitude = 14;
+      frequency = 2.2;
     } else if (mode === "photography") {
-      baseline = 94;
-      amplitude = 16;
-      frequency = 3.1;
+      baseline = 92;
+      amplitude = 24;
+      frequency = 3.4;
     }
 
     for (let x = 0; x <= width; x += 16) {
       const t = (x / width) * Math.PI * frequency + phase;
-      const growth = mode === "finance" ? Math.pow(x / width, 1.65) * 28 : 0;
+      const growth = mode === "finance" ? Math.pow(x / width, 1.85) * 42 : 0;
       const focusDrop = mode === "photography" ? Math.exp(-Math.pow((x - 320) / 120, 2)) * 18 : 0;
       const y = baseline + Math.sin(t) * amplitude - growth - focusDrop;
       points.push(`${x},${Math.max(16, Math.min(height - 12, y)).toFixed(2)}`);
@@ -354,7 +396,7 @@ function setupInterestSignal() {
 
   const animate = () => {
     const mode = document.body.dataset.interestMode || "travel";
-    phase += mode === "music" ? 0.1 : mode === "finance" ? 0.045 : 0.065;
+    phase += mode === "music" ? 0.16 : mode === "finance" ? 0.052 : mode === "photography" ? 0.1 : 0.072;
     interestSignal.setAttribute("d", buildPath(mode));
     if (!prefersReducedMotion) {
       requestAnimationFrame(animate);
@@ -367,12 +409,54 @@ function setupInterestSignal() {
   }
 }
 
+function setupCompoundFormula() {
+  if (!formulaA || !formulaR || !formulaT) {
+    return;
+  }
+
+  let lastStep = -1;
+  const basePrincipal = 1000;
+  const modeRate = {
+    travel: 0.07,
+    photography: 0.095,
+    music: 0.115,
+    finance: 0.13,
+    agent: 0.088
+  };
+
+  const update = () => {
+    const mode = document.body.dataset.interestMode || "travel";
+    const progress = getInterestProgress();
+    const rateBase = modeRate[mode] || 0.08;
+    const timeBase = 2 + progress * 9;
+    const step = Math.floor((performance.now() / 260) % 7);
+    const jumpRate = rateBase + step * 0.004;
+    const jumpTime = timeBase + (step % 3) * 0.45;
+    const amount = basePrincipal * Math.pow(1 + jumpRate, jumpTime);
+
+    if (step !== lastStep || !prefersReducedMotion) {
+      formulaA.textContent = amount.toFixed(2);
+      formulaR.textContent = jumpRate.toFixed(3);
+      formulaT.textContent = jumpTime.toFixed(2);
+      lastStep = step;
+    }
+
+    if (!prefersReducedMotion) {
+      requestAnimationFrame(update);
+    }
+  };
+
+  update();
+}
+
 setupRevealSystem();
 setupHeroParallax();
 setupAutonomousCursor();
+setupFieldPoints();
 setupTextScan();
 setupHeroOrb();
 setupCommandNavigation();
 setupInterestsInteractions();
 setupInterestSignal();
+setupCompoundFormula();
 applyInterestMode("travel");
