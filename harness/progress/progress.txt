@@ -17,4 +17,4 @@ Next recommended step:
 - Evaluator should verify CHECK-501 to CHECK-508 and confirm dynamic_effects.md mapping is materially present while the page stays premium and restrained.
 
 Implementation commit:
-- e73e7cebe4d86ea00ef16f270f244b84984ec3a2
+- e73e7ceb83297ec89a2304e93e19ce1928ef979f
