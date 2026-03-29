@@ -259,15 +259,15 @@
         "verification_steps":  [
                                    "Inspect about, projects, and contact layout."
                                ],
-        "status":  "implemented",
-        "passes":  false,
+        "status":  "verified",
+        "passes":  true,
         "sprint_id":  "S003",
         "depends_on":  [
 
                        ],
-        "notes":  "Implemented in Sprint S003 by generator.",
-        "last_updated_at":  "2026-03-29T17:34:20.3240743+08:00",
-        "last_updated_by":  "generator"
+        "notes":  "Verified in Sprint S003 evaluation.",
+        "last_updated_at":  "2026-03-29T17:51:50.5672061+08:00",
+        "last_updated_by":  "evaluator"
     },
     {
         "id":  "TODO-013",
@@ -281,15 +281,15 @@
         "verification_steps":  [
                                    "Inspect updated color roles and contrast."
                                ],
-        "status":  "implemented",
-        "passes":  false,
+        "status":  "verified",
+        "passes":  true,
         "sprint_id":  "S003",
         "depends_on":  [
 
                        ],
-        "notes":  "Implemented in Sprint S003 by generator.",
-        "last_updated_at":  "2026-03-29T17:34:20.3240743+08:00",
-        "last_updated_by":  "generator"
+        "notes":  "Verified in Sprint S003 evaluation.",
+        "last_updated_at":  "2026-03-29T17:51:50.5672061+08:00",
+        "last_updated_by":  "evaluator"
     },
     {
         "id":  "TODO-014",
@@ -303,16 +303,16 @@
         "verification_steps":  [
                                    "Inspect final interactions and generator notes."
                                ],
-        "status":  "implemented",
-        "passes":  false,
+        "status":  "verified",
+        "passes":  true,
         "sprint_id":  "S003",
         "depends_on":  [
                            "TODO-012",
                            "TODO-013"
                        ],
-        "notes":  "Implemented in Sprint S003 by generator.",
-        "last_updated_at":  "2026-03-29T17:34:20.3240743+08:00",
-        "last_updated_by":  "generator"
+        "notes":  "Verified in Sprint S003 evaluation.",
+        "last_updated_at":  "2026-03-29T17:51:50.5672061+08:00",
+        "last_updated_by":  "evaluator"
     },
     {
         "id":  "TODO-015",
@@ -326,16 +326,16 @@
         "verification_steps":  [
                                    "Inspect choreography and reduced-motion behavior."
                                ],
-        "status":  "implemented",
-        "passes":  false,
+        "status":  "verified",
+        "passes":  true,
         "sprint_id":  "S003",
         "depends_on":  [
                            "TODO-012",
                            "TODO-014"
                        ],
-        "notes":  "Implemented in Sprint S003 by generator.",
-        "last_updated_at":  "2026-03-29T17:34:20.3240743+08:00",
-        "last_updated_by":  "generator"
+        "notes":  "Verified in Sprint S003 evaluation.",
+        "last_updated_at":  "2026-03-29T17:51:50.5672061+08:00",
+        "last_updated_by":  "evaluator"
     },
     {
         "id":  "TODO-016",
@@ -349,15 +349,164 @@
         "verification_steps":  [
                                    "Inspect generator notes and run instructions."
                                ],
-        "status":  "implemented",
-        "passes":  false,
+        "status":  "verified",
+        "passes":  true,
         "sprint_id":  "S003",
         "depends_on":  [
                            "TODO-013",
                            "TODO-014"
                        ],
-        "notes":  "Implemented in Sprint S003 by generator.",
-        "last_updated_at":  "2026-03-29T17:34:20.3240743+08:00",
+        "notes":  "Verified in Sprint S003 evaluation.",
+        "last_updated_at":  "2026-03-29T17:51:50.5672061+08:00",
+        "last_updated_by":  "evaluator"
+    },
+    {
+        "id":  "TODO-017",
+        "title":  "Repair hero-to-page visual continuity",
+        "category":  "design",
+        "priority":  "high",
+        "description":  "Remove the cold rectangular break in the PERSONAL EDITION area and unify hero/background logic into one continuous atmospheric canvas.",
+        "acceptance_criteria":  [
+                                    "Hero no longer reads as a cold isolated block floating on a warm page.",
+                                    "Warm paper base and cool accents are blended into one continuous page-level composition."
+                                ],
+        "verification_steps":  [
+                                   "Inspect hero and first viewport for color seam removal.",
+                                   "Confirm cool tones appear as light, glow, or interaction feedback rather than hard background slabs."
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S004",
+        "depends_on":  [
+
+                       ],
+        "notes":  "Implemented in Sprint S004 by generator.",
+        "last_updated_at":  "2026-03-29T21:08:10.8785824+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-018",
+        "title":  "Upgrade the page-wide atmospheric palette and deep anchor system",
+        "category":  "design",
+        "priority":  "high",
+        "description":  "Apply the new palette roles: bone-white parchment base, slate-charcoal ink, mist-teal cool accent, muted brass warm accent, and a deep green-gray or deep navy anchor.",
+        "acceptance_criteria":  [
+                                    "The palette uses the requested warm paper base with controlled cool and warm accents.",
+                                    "Deep anchor tones are present to stabilize the composition and improve premium contrast."
+                                ],
+        "verification_steps":  [
+                                   "Inspect token or stylesheet variables for the new palette roles.",
+                                   "Confirm large hard cool panels are removed and cool tones are relegated to local light fields or feedback."
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S004",
+        "depends_on":  [
+                           "TODO-017"
+                       ],
+        "notes":  "Implemented in Sprint S004 by generator.",
+        "last_updated_at":  "2026-03-29T21:08:10.8785824+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-019",
+        "title":  "Dissolve residual panel containers into editorial annotations and track systems",
+        "category":  "design",
+        "priority":  "high",
+        "description":  "Break down the remaining right-side white frame and lower grid into marginal notes, floating tags, numbering systems, trace lines, and annotation layers instead of boxed panels.",
+        "acceptance_criteria":  [
+                                    "The right-side white frame and lower supporting structures are absorbed into one unified editorial system.",
+                                    "Page support elements read as annotations, labels, and trajectories rather than boxes."
+                                ],
+        "verification_steps":  [
+                                   "Inspect hero right rail and lower visual system for the absence of residual boxy panels.",
+                                   "Confirm support information uses labels, note markers, lines, or overlays instead of card containers."
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S004",
+        "depends_on":  [
+                           "TODO-017",
+                           "TODO-018"
+                       ],
+        "notes":  "Implemented in Sprint S004 by generator.",
+        "last_updated_at":  "2026-03-29T21:08:10.8785824+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-020",
+        "title":  "Build AI Agent and travel interaction language into the page canvas",
+        "category":  "feature",
+        "priority":  "high",
+        "description":  "Turn AI Agent and travel interests into explicit interaction systems: an interactive agent field with local rerouting and pulse communication, plus route traces, arcs, coordinates, and scroll-triggered trajectory language.",
+        "acceptance_criteria":  [
+                                    "AI Agent is represented by an interactive field with local path recalculation or pulse propagation behavior.",
+                                    "Travel is represented through route traces, coordinate markers, arc paths, or journey language tied to scroll or hover."
+                                ],
+        "verification_steps":  [
+                                   "Interact with the hero or main visual and confirm localized agent-field response.",
+                                   "Inspect about or experience for route traces, trajectory arcs, or coordinate markers triggered by interaction or scroll."
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S004",
+        "depends_on":  [
+                           "TODO-017",
+                           "TODO-019"
+                       ],
+        "notes":  "Implemented in Sprint S004 by generator.",
+        "last_updated_at":  "2026-03-29T21:08:10.8785824+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-021",
+        "title":  "Build photography, music, and finance interaction language into the page canvas",
+        "category":  "feature",
+        "priority":  "high",
+        "description":  "Express photography through viewfinder corners, focus lock, exposure sweep, and development-like entrances; music through rhythm-based reveal timing and underline cadence; finance through abstract signal lines, ticks, and market geometry without becoming a dashboard.",
+        "acceptance_criteria":  [
+                                    "Photography cues are visible in projects or the visual system through framing, focus, or exposure behavior.",
+                                    "Music is expressed through rhythmic title reveal, underline, or section-transition timing.",
+                                    "Finance knowledge appears as signal, ticker, or line-geometry language without turning the page into a data dashboard."
+                                ],
+        "verification_steps":  [
+                                   "Inspect projects and title transitions for photography and rhythm-response behaviors.",
+                                   "Inspect visual overlays and geometry for finance-inspired signal language that remains abstract and premium."
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S004",
+        "depends_on":  [
+                           "TODO-018",
+                           "TODO-019"
+                       ],
+        "notes":  "Implemented in Sprint S004 by generator.",
+        "last_updated_at":  "2026-03-29T21:08:10.8785824+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-022",
+        "title":  "Document the continuous-canvas system and preserve runtime quality",
+        "category":  "docs",
+        "priority":  "medium",
+        "description":  "Record how hero continuity, palette roles, de-panelization, and all five interest-driven interaction languages were implemented while preserving single-page behavior and runtime stability.",
+        "acceptance_criteria":  [
+                                    "Generator notes explicitly describe the continuous canvas logic and the five interest mappings.",
+                                    "Run instructions remain valid and the redesign preserves single-page usability."
+                                ],
+        "verification_steps":  [
+                                   "Inspect generator notes for continuity, palette, and interaction-language rationale.",
+                                   "Confirm the app still runs with documented commands after the redesign."
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S004",
+        "depends_on":  [
+                           "TODO-020",
+                           "TODO-021"
+                       ],
+        "notes":  "Implemented in Sprint S004 by generator.",
+        "last_updated_at":  "2026-03-29T21:08:10.8785824+08:00",
         "last_updated_by":  "generator"
     }
 ]

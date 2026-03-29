@@ -2,17 +2,18 @@
     "project_id":  "personal-homepage",
     "phase":  "implementation_done",
     "status":  "active",
-    "active_sprint":  "S003",
-    "last_updated_at":  "2026-03-29T17:34:20.3240743+08:00",
+    "active_sprint":  "S004",
+    "last_updated_at":  "2026-03-29T21:08:10.8785824+08:00",
     "last_updated_by":  "generator",
     "current_scope":  [
-                          "TODO-012",
-                          "TODO-013",
-                          "TODO-014",
-                          "TODO-015",
-                          "TODO-016"
+                          "TODO-017",
+                          "TODO-018",
+                          "TODO-019",
+                          "TODO-020",
+                          "TODO-021",
+                          "TODO-022"
                       ],
-    "last_commit":  "1743779db3bd5b4671534fe82377f729f9836b36",
+    "last_commit":  "d07ab9bc83cd25d687a74db908ace1b8a5729bd8",
     "last_evaluation":  "PASS",
-    "resume_from":  "Evaluator should validate Sprint S003 for de-cardified composition, palette upgrade, interaction motifs, runtime stability, and %SystemDrive% safety."
+    "resume_from":  "Evaluator should validate Sprint S004 continuous-canvas continuity, palette roles, and five-interest interaction mapping while preserving %SystemDrive% safety."
 }
