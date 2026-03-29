@@ -654,8 +654,132 @@
                            "TODO-026",
                            "TODO-027"
                        ],
-        "notes":  "Implemented in Sprint S005 with explicit dynamic_effects.md mapping.",
+        "notes":  "Implemented in Sprint S005, but the user manually reviewed S005 and requested another implementation pass in the same sprint.",
         "last_updated_at":  "2026-03-29T21:49:08+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-029",
+        "title":  "Remove hover-induced gray background boxes",
+        "category":  "design",
+        "priority":  "high",
+        "description":  "Remove the pale gray hover background boxes that appear under components so hover states no longer create unintended panel blocks.",
+        "acceptance_criteria":  [
+                                    "Hovering components no longer produces unwanted light-gray background rectangles.",
+                                    "Hover feedback remains intentional but does not read as accidental box fills."
+                                ],
+        "verification_steps":  [
+                                   "Hover all major interactive components and confirm no gray box appears.",
+                                   "Confirm remaining hover cues are line, glow, motion, or emphasis based rather than fill-box based."
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S005",
+        "depends_on":  [
+
+                       ],
+        "notes":  "Implemented in S005 follow-up after manual review replanning.",
+        "last_updated_at":  "2026-03-29T22:23:40+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-030",
+        "title":  "Create one unified interests section",
+        "category":  "feature",
+        "priority":  "high",
+        "description":  "Merge travel, photography, music, and finance into one dedicated interests section and fully decouple it from About, Projects, and Experience.",
+        "acceptance_criteria":  [
+                                    "Travel, photography, music, and finance appear inside one unified interests section.",
+                                    "That section is no longer structurally or visually embedded inside About, Projects, or Experience."
+                                ],
+        "verification_steps":  [
+                                   "Inspect the page structure and confirm one explicit interests section exists.",
+                                   "Confirm About, Projects, and Experience no longer carry these four interest sub-blocks."
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S005",
+        "depends_on":  [
+                           "TODO-029"
+                       ],
+        "notes":  "Implemented in S005 follow-up after manual review replanning.",
+        "last_updated_at":  "2026-03-29T22:23:40+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-031",
+        "title":  "Constrain command navigation to an allowlisted command set",
+        "category":  "feature",
+        "priority":  "high",
+        "description":  "Restrict the command-style navigation so it only accepts predefined commands and deterministically maps each command to a corresponding section.",
+        "acceptance_criteria":  [
+                                    "Only allowlisted commands are accepted by the command interface.",
+                                    "Each valid command navigates to one clear target section."
+                                ],
+        "verification_steps":  [
+                                   "Try unsupported commands and confirm they are rejected or ignored gracefully.",
+                                   "Try valid commands and confirm they scroll to the intended section."
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S005",
+        "depends_on":  [
+                           "TODO-030"
+                       ],
+        "notes":  "Implemented in S005 follow-up after manual review replanning.",
+        "last_updated_at":  "2026-03-29T22:23:40+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-032",
+        "title":  "Tighten dynamic_effects.md absorption across AI and interests interactions",
+        "category":  "feature",
+        "priority":  "high",
+        "description":  "Rework the interaction layer so dynamic_effects.md is followed as a strict specification for AI Agent, travel, photography, music, and finance behavior rather than loose inspiration.",
+        "acceptance_criteria":  [
+                                    "AI Agent, travel, photography, music, and finance behaviors can each be traced back to dynamic_effects.md.",
+                                    "The interaction layer shows stricter fidelity to the document than the previous S005 implementation pass."
+                                ],
+        "verification_steps":  [
+                                   "Compare the final interactions against dynamic_effects.md line by line.",
+                                   "Confirm the new interests section carries the dynamic behaviors instead of scattered legacy placements."
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S005",
+        "depends_on":  [
+                           "TODO-030",
+                           "TODO-031"
+                       ],
+        "notes":  "Implemented in S005 follow-up after manual review replanning.",
+        "last_updated_at":  "2026-03-29T22:23:40+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-033",
+        "title":  "Document same-sprint replan and preserve runtime quality",
+        "category":  "docs",
+        "priority":  "medium",
+        "description":  "Record that S005 was manually reviewed, not formally evaluator-approved, and then replanned in place for another generator pass while keeping runtime quality and %SystemDrive% safety intact.",
+        "acceptance_criteria":  [
+                                    "Sprint artifacts explicitly describe the S005 manual review and same-sprint replan decision.",
+                                    "Generator notes document how dynamic_effects.md and the new interests-section architecture were absorbed."
+                                ],
+        "verification_steps":  [
+                                   "Inspect state, progress, and handoff files for explicit same-sprint replan language.",
+                                   "Confirm runtime instructions remain valid after the replanning changes."
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S005",
+        "depends_on":  [
+                           "TODO-029",
+                           "TODO-030",
+                           "TODO-031",
+                           "TODO-032"
+                       ],
+        "notes":  "Implemented in S005 follow-up after manual review replanning.",
+        "last_updated_at":  "2026-03-29T22:23:40+08:00",
         "last_updated_by":  "generator"
     }
 ]

@@ -1,13 +1,18 @@
-# Sprint S005 Generator Notes
+# Sprint S005 Generator Notes (Follow-up Pass)
+
+## Replan Context
+
+- This is not a new sprint. It is an in-place S005 follow-up implementation.
+- The previous S005 pass was manually reviewed and rejected by the user.
+- The user explicitly skipped evaluator and required S005 replanning in place.
 
 ## Tasks Worked On
 
-- TODO-023: Removed residual hero panel feel by replacing the boxed PERSONAL EDITION visual region with a continuous hero field and shared atmospheric gradients.
-- TODO-024: Implemented AI-agent interaction language from `dynamic_effects.md` through an autonomous light cursor, scan beam behavior, moving agent orb, and command-style navigation with streaming execution text.
-- TODO-025: Implemented travel and photography language through route arcs, trajectory traces, and focus/blur/reveal location thumbnails linked to project entries.
-- TODO-026: Implemented music + finance language through thin animated signal-wave behavior, rhythm pacing, and finance-curve mode switching without adding dashboard modules.
-- TODO-027: Unified all interaction motifs under one restrained timing/palette system to avoid demo-fragment feel.
-- TODO-028: Documented `dynamic_effects.md` mapping and preserved explicit user override context (S004 manually rejected and evaluator intentionally skipped).
+- TODO-029: Removed pale-gray hover fill boxes from major interactive components and replaced hover cues with border/lightweight motion emphasis.
+- TODO-030: Added one independent `#interests` section and consolidated travel, photography, music, and finance dynamics there.
+- TODO-031: Enforced strict command allowlist and deterministic command-to-section mapping; unsupported commands are rejected.
+- TODO-032: Tightened dynamic_effects.md absorption so AI-agent + interests interactions are explicitly mapped and concentrated in one coherent system.
+- TODO-033: Documented same-sprint replan context and preserved runtime quality and %SystemDrive% safety.
 
 ## Files Changed
 
@@ -21,50 +26,55 @@
 - harness/sprints/S005/sprint_todos.json
 - harness/sprints/S005/generator_notes.md
 
-## Design Decisions
+## What Changed In UI Architecture
 
-- Hero continuity first: removed panel silhouettes and hard visual seams in the PERSONAL EDITION area, making signals read as part of one canvas.
-- Command language stays presentational, not functional: `/travel`, `/music`, `/finance`, `/agent` trigger section focus and streamed execution text, not app modules.
-- Motion restraint: one coherent set of signals (scan beam, route traces, waveform morphs, focus reveal) instead of many unrelated micro-effects.
-- Interaction grammar keeps premium-artistic tone: thin lines, subtle glow, measured timing, and no dashboard/player/planner widgets.
+- Interests are now decoupled:
+- About contains background/context only.
+- Projects contains project content only.
+- Experience contains timeline only.
+- Travel, photography, music, and finance now live in a dedicated unified `#interests` section.
 
-## dynamic_effects.md Mapping
+- Command interface is now allowlisted only:
+- `/agent`, `/about`, `/interests`, `/travel`, `/photography`, `/music`, `/finance`, `/projects`, `/experience`, `/contact`
+- Any other command returns a rejection message (`allowlist only`).
+
+## dynamic_effects.md Compliance Mapping (Stricter Pass)
 
 - AI Agent:
-- Autonomous cursor implemented with inertial orb + trailing halo and idle drift.
-- Scan behavior implemented through hero scan-beam sweep and text scan highlight on hover.
-- Command-style navigation implemented via command input + quick command pills and streaming execution feedback.
+- Autonomous cursor implemented as inertial orb + trailing halo with idle drift.
+- Text scan beam behavior implemented on hover and hero field scan trigger.
+- Command-line input retained with streaming execution feedback and strict command parsing.
 
-- Travel + photography:
-- Travel arcs and route-trace paths implemented in hero and experience visual flow.
-- Photography focus language implemented using blur-to-focus location thumbnails and hover-driven viewfinder cues.
-- Spatial reveal implemented via section-triggered route animation and focus state transitions.
+- Travel + Photography:
+- Travel route arcs implemented in the unified interests canvas with animated path traces.
+- Photography focus behavior implemented via movable lens overlay and spatial reveal in interests canvas.
+- City-linked interactions are represented through city track controls and status channel updates.
 
-- Music + finance:
-- Thin sine/signal line implemented in hero field via animated SVG signal path.
-- Rhythm pacing implemented with reveal choreography and notation pulse behavior.
-- Finance-curve behavior implemented by switching signal-wave math mode to growth-biased curves on finance command context.
+- Music + Finance:
+- Thin signal wave line is continuously animated in interests canvas.
+- Music mode increases oscillation frequency/pacing.
+- Finance mode applies growth-biased curve behavior inspired by compound-growth logic.
+- Compound formula language is explicitly present as `A = P · (1 + r)^t`.
 
-## User Override Context
+## Design Decisions
 
-- Sprint S004 was manually reviewed and rejected by the user.
-- The user explicitly skipped evaluator for S004 and requested direct progression to S005.
-- This sprint therefore implements S005 as the active contracted successor without routing S004 back through evaluator.
+- Removed gray hover fills rather than replacing them with other block backgrounds.
+- Kept interaction motifs abstract and editorial; no dashboard/player/planner widgets were introduced.
+- Kept the page single-page, premium-artistic, and restrained in accordance with S005 contract boundaries.
 
 ## Unresolved Limitations
 
-- Profile copy, project outcomes, and social/contact links remain placeholders.
-- No custom branded media pack is supplied yet.
-- The interaction system is intentionally abstract and restrained; it does not include functional modules by contract.
+- Real copy, project evidence, and real contact endpoints remain placeholders.
+- Branded media assets and final typography assets are still pending.
 
-## Recommended Evaluator Focus
+## Recommended Future Evaluator Focus
 
-- Confirm CHECK-501: no remaining panel/card feel or color seam in PERSONAL EDITION/hero continuity.
-- Confirm CHECK-502: autonomous cursor + scan behavior + command navigation are visibly implemented and coherent.
-- Confirm CHECK-503: travel + photography motion language appears through route traces and focus/reveal behavior.
-- Confirm CHECK-504: music + finance mapping appears through signal/wave/curve behavior without dashboard/player drift.
-- Confirm CHECK-505 to CHECK-508: coherence, runtime stability, responsive usability, and `%SystemDrive%` safety.
+- Verify no pale-gray hover boxes remain on major interactive components.
+- Verify one unified interests section exists and interest dynamics are no longer embedded in About/Projects/Experience.
+- Verify command parsing is strict allowlist behavior.
+- Verify dynamic_effects.md mapping fidelity is stronger than prior S005 pass.
+- Verify responsive behavior and `%SystemDrive%` non-interference.
 
 ## Git Commit Hash
 
-- e73e7ceb83297ec89a2304e93e19ce1928ef979f
+- PENDING

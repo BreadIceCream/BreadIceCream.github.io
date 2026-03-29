@@ -1,6 +1,6 @@
 # personal-homepage
 
-Sprint `S005` removes the remaining hero panel residue and absorbs `dynamic_effects.md` into one coherent premium-artistic interaction language.
+Sprint `S005` follow-up pass addresses the latest manual review: no gray hover boxes, one unified interests section, allowlisted command navigation, and stricter `dynamic_effects.md` compliance.
 
 ## Local Run
 
@@ -22,21 +22,15 @@ npm run check
 
 ## What Is Included In S005
 
-- Continuous hero canvas without detached panel feel in the PERSONAL EDITION area
-- AI-agent interaction language:
-- Autonomous light cursor
-- Hero scan beam and moving agent orb
-- Command-style navigation (`/travel`, `/music`, `/finance`, `/agent`) with streaming execution text
+- Continuous hero canvas with no detached panel residue in PERSONAL EDITION
+- Allowlisted command interface only:
+- `/agent`, `/about`, `/interests`, `/travel`, `/photography`, `/music`, `/finance`, `/projects`, `/experience`, `/contact`
+- Unsupported commands are rejected
 
-- Travel + photography interaction language:
-- Route arcs and trajectory traces in the hero/experience flow
-- Focus-blur-reveal location thumbnails in project entries
-- Spatial reveal behavior tied to hover and viewport focus
-
-- Music + finance interaction language:
-- Thin animated signal wave
-- Rhythm-notation pacing in section reveal
-- Finance-style curve mode for the signal line without dashboard UI
+- Unified independent interests section:
+- Travel, photography, music, and finance are consolidated into one section (`#interests`)
+- This section is decoupled from About / Projects / Experience
+- Dynamic behavior includes route trace arcs, focus lens reveal, frequency signal waves, and finance growth curve language
 
 - Preserved constraints:
 - Single-page information architecture remains intact

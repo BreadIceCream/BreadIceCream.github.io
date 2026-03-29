@@ -6,15 +6,18 @@ const revealNodes = Array.from(document.querySelectorAll(".reveal"));
 const hero = document.querySelector(".hero");
 const heroArt = document.querySelector(".hero-art");
 const heroField = document.querySelector("[data-agent-field]");
-const signalPath = document.querySelector("[data-signal-path]");
 const orb = document.querySelector("[data-agent-orb]");
-const scanBeam = document.querySelector("[data-scan-beam]");
-const fieldPoints = document.querySelector("[data-field-points]");
 const commandInput = document.querySelector("[data-command-input]");
 const commandStream = document.querySelector("[data-command-stream]");
 const commandButtons = Array.from(document.querySelectorAll("[data-command]"));
-const projectEntries = Array.from(document.querySelectorAll("[data-viewfinder]"));
-const rhythmNotation = document.querySelector("[data-rhythm]");
+const textScanTargets = Array.from(document.querySelectorAll("h1, h2, h3, p, li, .btn, .site-nav a"));
+const interestsSection = document.querySelector("#interests");
+const interestsCanvas = document.querySelector("[data-interests-canvas]");
+const interestsNodes = Array.from(document.querySelectorAll("[data-interest-node]"));
+const cityButtons = Array.from(document.querySelectorAll("[data-city]"));
+const interestSignal = document.querySelector("[data-interest-signal]");
+const interestStatus = document.querySelector("[data-interest-status]");
+const focusLens = document.querySelector("[data-focus-lens]");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (yearNode) {
@@ -48,13 +51,13 @@ function setupRevealSystem() {
     return;
   }
 
-  const rhythmPattern = [0, 110, 180, 320, 420, 560];
-  const revealObserver = new IntersectionObserver(
+  const pattern = [0, 120, 210, 320, 430, 560];
+  const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
-          revealObserver.unobserve(entry.target);
+          observer.unobserve(entry.target);
         }
       });
     },
@@ -62,8 +65,8 @@ function setupRevealSystem() {
   );
 
   revealNodes.forEach((node, index) => {
-    node.style.transitionDelay = `${rhythmPattern[index % rhythmPattern.length]}ms`;
-    revealObserver.observe(node);
+    node.style.transitionDelay = `${pattern[index % pattern.length]}ms`;
+    observer.observe(node);
   });
 }
 
@@ -75,7 +78,7 @@ function setupHeroParallax() {
   hero.addEventListener("pointermove", (event) => {
     const rect = hero.getBoundingClientRect();
     const x = ((event.clientX - rect.left) / rect.width - 0.5) * 8;
-    const y = ((event.clientY - rect.top) / rect.height - 0.5) * 6;
+    const y = ((event.clientY - rect.top) / rect.height - 0.5) * 5;
     heroArt.style.transform = `translate(${x}px, ${y}px)`;
   });
 
@@ -112,16 +115,15 @@ function setupAutonomousCursor() {
 
   const tick = (time) => {
     if (time - idleSince > 1400) {
-      autoAngle += 0.016;
-      const radius = 22;
-      pointerX += Math.cos(autoAngle) * 0.9;
+      autoAngle += 0.018;
+      pointerX += Math.cos(autoAngle) * 1.1;
       pointerY += Math.sin(autoAngle) * 0.8;
-      pointerX = Math.max(8, Math.min(window.innerWidth - 8, pointerX));
-      pointerY = Math.max(8, Math.min(window.innerHeight - 8, pointerY));
+      pointerX = Math.max(10, Math.min(window.innerWidth - 10, pointerX));
+      pointerY = Math.max(10, Math.min(window.innerHeight - 10, pointerY));
     }
 
-    orbX += (pointerX - orbX) * 0.22;
-    orbY += (pointerY - orbY) * 0.22;
+    orbX += (pointerX - orbX) * 0.24;
+    orbY += (pointerY - orbY) * 0.24;
     tailX += (pointerX - tailX) * 0.12;
     tailY += (pointerY - tailY) * 0.12;
 
@@ -129,7 +131,7 @@ function setupAutonomousCursor() {
     orbNode.style.top = `${orbY}px`;
     tailNode.style.left = `${tailX}px`;
     tailNode.style.top = `${tailY}px`;
-    tailNode.style.width = `${28 + Math.sin(time / 170) * 5}px`;
+    tailNode.style.width = `${28 + Math.sin(time / 170) * 4}px`;
 
     requestAnimationFrame(tick);
   };
@@ -138,14 +140,11 @@ function setupAutonomousCursor() {
 }
 
 function setupTextScan() {
-  const scanTargets = Array.from(
-    document.querySelectorAll("h1, h2, h3, p, li, .btn, .site-nav a")
-  );
-  scanTargets.forEach((target) => {
+  textScanTargets.forEach((target) => {
     target.addEventListener("pointerenter", () => {
       target.classList.remove("scan-active");
       requestAnimationFrame(() => target.classList.add("scan-active"));
-      if (heroField && scanBeam && !prefersReducedMotion) {
+      if (heroField && !prefersReducedMotion) {
         heroField.classList.remove("scanning");
         requestAnimationFrame(() => heroField.classList.add("scanning"));
       }
@@ -153,61 +152,104 @@ function setupTextScan() {
   });
 }
 
-function setCommandStream(message) {
+function setupHeroOrb() {
+  if (!heroField || !orb || prefersReducedMotion) {
+    return;
+  }
+
+  let t = 0;
+  const loop = () => {
+    t += 0.013;
+    const x = 50 + Math.cos(t) * 34 + Math.sin(t * 1.6) * 5;
+    const y = 52 + Math.sin(t * 1.2) * 30;
+    orb.style.left = `${x}%`;
+    orb.style.top = `${y}%`;
+    requestAnimationFrame(loop);
+  };
+  requestAnimationFrame(loop);
+}
+
+function streamMessage(text) {
   if (!commandStream) {
     return;
   }
 
   if (prefersReducedMotion) {
-    commandStream.textContent = message;
+    commandStream.textContent = text;
     return;
   }
 
   commandStream.textContent = "";
   let index = 0;
   const step = () => {
-    commandStream.textContent = message.slice(0, index);
+    commandStream.textContent = text.slice(0, index);
     index += 1;
-    if (index <= message.length) {
+    if (index <= text.length) {
       setTimeout(step, 14);
     }
   };
   step();
 }
 
+const COMMAND_ALLOWLIST = {
+  "/agent": { selector: "#home", mode: "agent", label: "agent field ready" },
+  "/about": { selector: "#about", mode: "agent", label: "about context loaded" },
+  "/interests": { selector: "#interests", mode: "travel", label: "interests core online" },
+  "/travel": { selector: "#interests", mode: "travel", label: "travel trajectory mode" },
+  "/photography": { selector: "#interests", mode: "photography", label: "lens focus mode" },
+  "/music": { selector: "#interests", mode: "music", label: "frequency mode" },
+  "/finance": { selector: "#interests", mode: "finance", label: "compound curve mode" },
+  "/projects": { selector: "#projects", mode: "music", label: "project stream selected" },
+  "/experience": { selector: "#experience", mode: "travel", label: "experience route selected" },
+  "/contact": { selector: "#contact", mode: "finance", label: "contact endpoint selected" }
+};
+
+function applyInterestMode(mode) {
+  if (!document.body) {
+    return;
+  }
+  document.body.dataset.interestMode = mode;
+  interestsNodes.forEach((node) => {
+    node.classList.toggle("active", node.getAttribute("data-interest-node") === mode);
+  });
+  if (interestStatus) {
+    const labelMap = {
+      travel: "mode://travel -> route tracing online",
+      photography: "mode://photography -> lens focus and reveal",
+      music: "mode://music -> frequency pacing online",
+      finance: "mode://finance -> growth-signal online",
+      agent: "mode://agent -> scan channel online"
+    };
+    interestStatus.textContent = labelMap[mode] || "mode://travel -> route tracing online";
+  }
+}
+
 function executeCommand(raw) {
-  const normalized = raw.trim().toLowerCase().replace(/^\/+/, "");
+  const normalized = raw.trim().toLowerCase();
   if (!normalized) {
     return;
   }
 
-  const mapping = {
-    travel: { selector: "#experience", label: "route trace and travel arcs" },
-    music: { selector: "#about", label: "rhythm notation mode" },
-    finance: { selector: "#contact", label: "signal curve mode" },
-    agent: { selector: "#home", label: "agent scan field" },
-    projects: { selector: "#projects", label: "photography focus stream" }
-  };
-
-  const task = mapping[normalized];
+  const command = normalized.startsWith("/") ? normalized : `/${normalized}`;
+  const task = COMMAND_ALLOWLIST[command];
   if (!task) {
-    setCommandStream(`unknown command /${normalized}`);
+    streamMessage(`rejected ${command} (allowlist only)`);
     return;
   }
 
   const target = document.querySelector(task.selector);
   if (target) {
     target.scrollIntoView({ behavior: "smooth", block: "start" });
-    setCommandStream(`executing /${normalized} -> ${task.label} ... done`);
-    document.body.dataset.signalMode = normalized === "finance" ? "finance" : "music";
   }
+  applyInterestMode(task.mode);
+  streamMessage(`execute ${command} -> ${task.label}`);
 }
 
 function setupCommandNavigation() {
   if (commandInput) {
     commandInput.addEventListener("keydown", (event) => {
       if (event.key === "Enter") {
-        executeCommand(commandInput.value.startsWith("/") ? commandInput.value : `/${commandInput.value}`);
+        executeCommand(commandInput.value);
         commandInput.value = "";
       }
     });
@@ -221,146 +263,116 @@ function setupCommandNavigation() {
   });
 }
 
-function setupFieldPoints() {
-  if (!fieldPoints) {
+function setupInterestsInteractions() {
+  if (!interestsCanvas || !interestSignal || !interestsSection) {
     return;
   }
 
-  const points = [
-    [8, 68],
-    [18, 36],
-    [30, 74],
-    [43, 26],
-    [56, 64],
-    [68, 40],
-    [84, 72],
-    [92, 34]
-  ];
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          interestsCanvas.classList.add("visible");
+        }
+      });
+    },
+    { threshold: 0.22 }
+  );
+  sectionObserver.observe(interestsSection);
 
-  points.forEach(([x, y], index) => {
-    const point = document.createElement("span");
-    point.className = "field-point";
-    point.style.left = `${x}%`;
-    point.style.top = `${y}%`;
-    point.style.opacity = `${0.45 + (index % 3) * 0.15}`;
-    fieldPoints.appendChild(point);
+  interestsNodes.forEach((node) => {
+    node.addEventListener("mouseenter", () => {
+      const mode = node.getAttribute("data-interest-node") || "travel";
+      applyInterestMode(mode);
+    });
   });
-}
 
-function setupAgentOrbMotion() {
-  if (!heroField || !orb || prefersReducedMotion) {
-    return;
+  cityButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      cityButtons.forEach((it) => it.classList.remove("active"));
+      button.classList.add("active");
+      if (interestStatus) {
+        const city = button.getAttribute("data-city");
+        interestStatus.textContent = `mode://${document.body.dataset.interestMode || "travel"} -> locating ${city}`;
+      }
+    });
+  });
+
+  if (focusLens && !prefersReducedMotion) {
+    interestsCanvas.addEventListener("pointermove", (event) => {
+      const rect = interestsCanvas.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+      focusLens.style.left = `${x}px`;
+      focusLens.style.top = `${y}px`;
+    });
+
+    interestsCanvas.addEventListener("pointerleave", () => {
+      focusLens.style.left = "14%";
+      focusLens.style.top = "50%";
+    });
   }
-
-  let t = 0;
-  const loop = () => {
-    t += 0.012;
-    const x = 50 + Math.cos(t) * 34 + Math.sin(t * 1.8) * 6;
-    const y = 54 + Math.sin(t * 1.3) * 28;
-    orb.style.left = `${x}%`;
-    orb.style.top = `${y}%`;
-    requestAnimationFrame(loop);
-  };
-  requestAnimationFrame(loop);
-
-  heroField.addEventListener("pointermove", (event) => {
-    const rect = heroField.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / rect.width) * 100;
-    const y = ((event.clientY - rect.top) / rect.height) * 100;
-    orb.style.left = `${Math.max(2, Math.min(98, x))}%`;
-    orb.style.top = `${Math.max(6, Math.min(94, y))}%`;
-    heroField.classList.remove("scanning");
-    requestAnimationFrame(() => heroField.classList.add("scanning"));
-  });
 }
 
-function setupSignalPath() {
-  if (!signalPath) {
+function setupInterestSignal() {
+  if (!interestSignal) {
     return;
   }
 
   let phase = 0;
   const buildPath = (mode) => {
-    const width = 560;
-    const height = 130;
-    const baseline = mode === "finance" ? 78 : 64;
-    const amplitude = mode === "finance" ? 12 : 20;
-    const frequency = mode === "finance" ? 2.1 : 3.6;
+    const width = 640;
+    const height = 180;
     const points = [];
+    let baseline = 96;
+    let amplitude = 14;
+    let frequency = 2.2;
 
-    for (let x = 0; x <= width; x += 14) {
-      const t = (x / width) * Math.PI * frequency + phase;
-      const growth = mode === "finance" ? Math.pow(x / width, 1.7) * 24 : 0;
-      const y = baseline + Math.sin(t) * amplitude - growth;
-      points.push(`${x},${Math.max(8, Math.min(height - 8, y)).toFixed(2)}`);
+    if (mode === "music") {
+      baseline = 92;
+      amplitude = 19;
+      frequency = 4.2;
+    } else if (mode === "finance") {
+      baseline = 106;
+      amplitude = 10;
+      frequency = 2.1;
+    } else if (mode === "photography") {
+      baseline = 94;
+      amplitude = 16;
+      frequency = 3.1;
     }
 
+    for (let x = 0; x <= width; x += 16) {
+      const t = (x / width) * Math.PI * frequency + phase;
+      const growth = mode === "finance" ? Math.pow(x / width, 1.65) * 28 : 0;
+      const focusDrop = mode === "photography" ? Math.exp(-Math.pow((x - 320) / 120, 2)) * 18 : 0;
+      const y = baseline + Math.sin(t) * amplitude - growth - focusDrop;
+      points.push(`${x},${Math.max(16, Math.min(height - 12, y)).toFixed(2)}`);
+    }
     return `M${points.join(" L")}`;
   };
 
-  const tick = () => {
-    const mode = document.body.dataset.signalMode === "finance" ? "finance" : "music";
-    phase += mode === "finance" ? 0.04 : 0.07;
-    signalPath.setAttribute("d", buildPath(mode));
+  const animate = () => {
+    const mode = document.body.dataset.interestMode || "travel";
+    phase += mode === "music" ? 0.1 : mode === "finance" ? 0.045 : 0.065;
+    interestSignal.setAttribute("d", buildPath(mode));
     if (!prefersReducedMotion) {
-      requestAnimationFrame(tick);
+      requestAnimationFrame(animate);
     }
   };
 
-  signalPath.setAttribute("d", buildPath("music"));
+  interestSignal.setAttribute("d", buildPath("travel"));
   if (!prefersReducedMotion) {
-    requestAnimationFrame(tick);
+    requestAnimationFrame(animate);
   }
-}
-
-function setupPhotographyReveal() {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        entry.target.classList.toggle("in-focus", entry.isIntersecting);
-      });
-    },
-    { threshold: 0.45 }
-  );
-
-  projectEntries.forEach((entry) => observer.observe(entry));
-
-  projectEntries.forEach((entry) => {
-    entry.addEventListener("mouseenter", () => {
-      entry.classList.add("focused");
-      if (!prefersReducedMotion) {
-        document.body.classList.remove("shutter-flash");
-        requestAnimationFrame(() => document.body.classList.add("shutter-flash"));
-      }
-    });
-    entry.addEventListener("mouseleave", () => entry.classList.remove("focused"));
-  });
-}
-
-function setupRhythmNotation() {
-  if (!rhythmNotation || prefersReducedMotion) {
-    return;
-  }
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          rhythmNotation.classList.add("playing");
-        }
-      });
-    },
-    { threshold: 0.35 }
-  );
-  observer.observe(rhythmNotation);
 }
 
 setupRevealSystem();
 setupHeroParallax();
 setupAutonomousCursor();
 setupTextScan();
+setupHeroOrb();
 setupCommandNavigation();
-setupFieldPoints();
-setupAgentOrbMotion();
-setupSignalPath();
-setupPhotographyReveal();
-setupRhythmNotation();
+setupInterestsInteractions();
+setupInterestSignal();
+applyInterestMode("travel");

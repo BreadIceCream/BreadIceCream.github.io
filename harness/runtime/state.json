@@ -1,19 +1,18 @@
 ﻿{
     "project_id":  "personal-homepage",
-    "phase":  "implementation_done",
+    "phase":  "implementing",
     "status":  "active",
     "active_sprint":  "S005",
-    "last_updated_at":  "2026-03-29T21:50:10+08:00",
+    "last_updated_at":  "2026-03-29T22:20:08+08:00",
     "last_updated_by":  "generator",
     "current_scope":  [
-                          "TODO-023",
-                          "TODO-024",
-                          "TODO-025",
-                          "TODO-026",
-                          "TODO-027",
-                          "TODO-028"
+                          "TODO-029",
+                          "TODO-030",
+                          "TODO-031",
+                          "TODO-032",
+                          "TODO-033"
                       ],
     "last_commit":  "e73e7ceb83297ec89a2304e93e19ce1928ef979f",
     "last_evaluation":  "FAIL",
-    "resume_from":  "S005 implementation complete. Evaluator should validate CHECK-501 through CHECK-508 with dynamic_effects mapping."
+    "resume_from":  "Generator implementing S005 follow-up: remove gray hover boxes, create unified interests section, enforce command allowlist, and tighten dynamic_effects compliance."
 }

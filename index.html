@@ -27,6 +27,7 @@
         </button>
         <nav id="site-nav" class="site-nav" aria-label="Primary">
           <a href="#about">About</a>
+          <a href="#interests">Interests</a>
           <a href="#projects">Projects</a>
           <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
@@ -46,7 +47,7 @@
             be replaced with your own narrative.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn btn-primary" href="#interests">Explore Interests</a>
             <a class="btn btn-secondary" href="#contact">Get In Touch</a>
           </div>
           <ul class="highlights" aria-label="Quick highlights">
@@ -64,7 +65,7 @@
                 id="agent-command-input"
                 data-command-input
                 type="text"
-                placeholder="travel | music | finance | agent | projects"
+                placeholder="/agent /interests /travel /music /finance /projects /about /experience /contact"
                 autocomplete="off"
               />
             </label>
@@ -72,6 +73,7 @@
               Awaiting command...
             </p>
             <div class="command-shortcuts">
+              <button type="button" data-command="/interests">/interests</button>
               <button type="button" data-command="/travel">/travel</button>
               <button type="button" data-command="/music">/music</button>
               <button type="button" data-command="/finance">/finance</button>
@@ -126,14 +128,59 @@
             priorities, and long-term direction.
           </p>
         </div>
-        <div class="rhythm-notation" data-rhythm aria-hidden="true">
-          <span></span><span></span><span></span><span></span>
-          <span></span><span></span><span></span><span></span>
+      </section>
+
+      <section id="interests" class="section reveal">
+        <div class="section-index">02</div>
+        <div class="section-heading">
+          <p class="eyebrow">Unified Interests</p>
+          <h2>Travel · Photography · Music · Finance</h2>
+          <p>
+            One independent section for all interest dynamics, fully decoupled
+            from About / Projects / Experience.
+          </p>
+        </div>
+        <div class="interests-grid" data-interests-grid>
+          <article class="interest-node active" data-interest-node="travel">
+            <h3>Travel</h3>
+            <p>Route traces, arcs, and location-linked transitions.</p>
+          </article>
+          <article class="interest-node" data-interest-node="photography">
+            <h3>Photography</h3>
+            <p>Lens focus, blur-to-reveal, and framing logic.</p>
+          </article>
+          <article class="interest-node" data-interest-node="music">
+            <h3>Music</h3>
+            <p>Frequency pacing and rhythm-aware motion timing.</p>
+          </article>
+          <article class="interest-node" data-interest-node="finance">
+            <h3>Finance</h3>
+            <p>Signal curves and compound-growth inspired transitions.</p>
+          </article>
+        </div>
+        <div class="interests-canvas" data-interests-canvas aria-hidden="true">
+          <svg class="interest-route" viewBox="0 0 640 180" preserveAspectRatio="none">
+            <path data-interest-route d="M14 130 C124 38, 220 170, 334 86 C426 24, 540 164, 626 62"></path>
+          </svg>
+          <svg class="interest-signal" viewBox="0 0 640 180" preserveAspectRatio="none">
+            <path data-interest-signal d=""></path>
+          </svg>
+          <div class="focus-lens" data-focus-lens></div>
+          <div class="city-track">
+            <button type="button" data-city="Changsha">Changsha</button>
+            <button type="button" data-city="Hong Kong">Hong Kong</button>
+            <button type="button" data-city="Tokyo">Tokyo</button>
+            <button type="button" data-city="Singapore">Singapore</button>
+          </div>
+          <p class="interest-status" data-interest-status>
+            mode://travel -> route tracing online
+          </p>
+          <p class="compound-formula">A = P · (1 + r)^t</p>
         </div>
       </section>
 
       <section id="projects" class="section reveal">
-        <div class="section-index">02</div>
+        <div class="section-index">03</div>
         <div class="section-heading">
           <p class="eyebrow">Featured</p>
           <h2>Projects</h2>
@@ -148,9 +195,6 @@
               A dashboard redesign focused on task clarity, data density, and
               keyboard-first interactions.
             </p>
-            <div class="location-thumb" data-location="Hong Kong">
-              <span>Hong Kong / Focus Lock</span>
-            </div>
             <a href="#contact">Request walkthrough</a>
           </article>
           <article class="project-entry" data-viewfinder>
@@ -160,9 +204,6 @@
               A modular campaign site with componentized sections and deliberate
               animation cadence.
             </p>
-            <div class="location-thumb" data-location="Tokyo">
-              <span>Tokyo / Exposure Sweep</span>
-            </div>
             <a href="#contact">Ask for details</a>
           </article>
           <article class="project-entry" data-viewfinder>
@@ -172,25 +213,16 @@
               Cross-team UI foundation: token hierarchy, primitives, and
               engineering handoff standards.
             </p>
-            <div class="location-thumb" data-location="Singapore">
-              <span>Singapore / Spatial Reveal</span>
-            </div>
             <a href="#contact">See implementation notes</a>
           </article>
         </div>
       </section>
 
       <section id="experience" class="section reveal">
-        <div class="section-index">03</div>
+        <div class="section-index">04</div>
         <div class="section-heading">
           <p class="eyebrow">Trajectory</p>
           <h2>Experience</h2>
-        </div>
-        <div class="travel-route" aria-hidden="true">
-          <svg viewBox="0 0 600 120" preserveAspectRatio="none">
-            <path d="M10 80 C110 20, 180 110, 280 54 C360 10, 430 112, 590 40" />
-          </svg>
-          <div class="coordinates">22.3193N / 114.1694E / moving</div>
         </div>
         <ol class="timeline">
           <li>
@@ -205,7 +237,7 @@
       </section>
 
       <section id="contact" class="section reveal">
-        <div class="section-index">04</div>
+        <div class="section-index">05</div>
         <div class="section-heading">
           <p class="eyebrow">Connection</p>
           <h2>Contact</h2>
