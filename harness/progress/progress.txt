@@ -3,18 +3,16 @@ Active sprint: S005
 Current scope: TODO-029, TODO-030, TODO-031, TODO-032, TODO-033
 
 Last completed actions:
-- Implemented S005 follow-up pass inside the same sprint after manual review rejection
-- Removed pale-gray hover fill boxes from major interactive components (navigation, secondary actions, command chips, interest nodes)
-- Added one independent unified interests section and moved travel/photography/music/finance dynamics into that section
-- Enforced strict allowlisted command navigation and deterministic command-to-section mapping
-- Tightened dynamic_effects.md compliance in one coherent interaction system (agent scan/cursor + travel arcs + focus lens + frequency/finance curve signal)
+- Completed another S005 same-sprint follow-up pass from user review findings (no new sprint)
+- Replaced weak text scan with visible bright white laser-style sweep across text
+- Strengthened interests section with blur-to-clear focus interaction, stronger signal wave presence, and clearer per-mode visual differentiation
+- Increased premium bright-tone contrast with stronger local saturated accents while keeping restrained art direction
+- Increased hero agent particle field density and added dynamic compound formula value jumping
+- Recorded implementation commit: 18f855b2193cd0fc9e4822dad01e383aaa712466
 
 Open issues:
-- Profile copy, project outcomes, and contact links remain placeholders by contract
+- Real personal copy, project outcomes, and external links remain placeholders
 - %SystemDrive%/ remains in workspace and must stay untouched
 
 Next recommended step:
-- Evaluator should validate CHECK-509 through CHECK-515 for the same-sprint S005 follow-up pass.
-
-Implementation commit:
-- f96fe25423810747935ed8ce03679efdb8f7fe66
+- Evaluator should validate CHECK-509 through CHECK-515 plus the five latest manual review findings inside S005.

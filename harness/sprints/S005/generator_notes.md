@@ -1,23 +1,40 @@
-# Sprint S005 Generator Notes (Follow-up Pass)
+# Sprint S005 Generator Notes (Additional Same-Sprint Pass)
 
-## Replan Context
+## Context
 
-- This is not a new sprint. It is an in-place S005 follow-up implementation.
-- The previous S005 pass was manually reviewed and rejected by the user.
-- The user explicitly skipped evaluator and required S005 replanning in place.
+- No new sprint was created.
+- This is an in-place S005 follow-up implementation after another user review round.
+- The prior S005 result was treated as not accepted.
 
 ## Tasks Worked On
 
-- TODO-029: Removed pale-gray hover fill boxes from major interactive components and replaced hover cues with border/lightweight motion emphasis.
-- TODO-030: Added one independent `#interests` section and consolidated travel, photography, music, and finance dynamics there.
-- TODO-031: Enforced strict command allowlist and deterministic command-to-section mapping; unsupported commands are rejected.
-- TODO-032: Tightened dynamic_effects.md absorption so AI-agent + interests interactions are explicitly mapped and concentrated in one coherent system.
-- TODO-033: Documented same-sprint replan context and preserved runtime quality and %SystemDrive% safety.
+- TODO-029: Removed residual weak/accidental hover treatment and replaced with refined border/glow emphasis.
+- TODO-030: Kept one unified independent interests section as the sole home of travel/photography/music/finance dynamics.
+- TODO-031: Preserved strict command allowlist and deterministic command-to-section routing.
+- TODO-032: Upgraded dynamic_effects.md fidelity (scan beam, focus, mode differentiation, signal intensity, formula dynamics).
+- TODO-033: Updated same-sprint follow-up artifacts and runtime/state records.
 
-## Files Changed
+## Changes For 5 User Findings
 
-- README.md
-- index.html
+- Text scan quality:
+- Replaced weak gradient scan with a visible bright-white laser-like sweep using `.scan-active::after` moving left-to-right across text.
+
+- Interests visual flatness:
+- Added scroll-driven focus transition (`--focus-blur`) so interests background goes from blur to clear.
+- Strengthened signal-wave visual weight and glow.
+- Added clear mode-specific visual differences for travel/photography/music/finance.
+
+- Premium feel (bright tone):
+- Reduced paper-like texture dominance and introduced stronger local saturated accents (cyan/amber/green-vivid highlights) while staying bright and restrained.
+
+- Hero agent visualization:
+- Increased field particle density substantially and added micro-points plus stronger luminance.
+
+- Compound formula dynamics:
+- Added continuous dynamic jumps for `A`, `r`, `t` driven by interaction mode and section progress.
+
+## Files Changed In This Pass
+
 - styles.css
 - main.js
 - harness/backlog/todos.json
@@ -26,55 +43,19 @@
 - harness/sprints/S005/sprint_todos.json
 - harness/sprints/S005/generator_notes.md
 
-## What Changed In UI Architecture
+## dynamic_effects.md Mapping (Current)
 
-- Interests are now decoupled:
-- About contains background/context only.
-- Projects contains project content only.
-- Experience contains timeline only.
-- Travel, photography, music, and finance now live in a dedicated unified `#interests` section.
-
-- Command interface is now allowlisted only:
-- `/agent`, `/about`, `/interests`, `/travel`, `/photography`, `/music`, `/finance`, `/projects`, `/experience`, `/contact`
-- Any other command returns a rejection message (`allowlist only`).
-
-## dynamic_effects.md Compliance Mapping (Stricter Pass)
-
-- AI Agent:
-- Autonomous cursor implemented as inertial orb + trailing halo with idle drift.
-- Text scan beam behavior implemented on hover and hero field scan trigger.
-- Command-line input retained with streaming execution feedback and strict command parsing.
-
-- Travel + Photography:
-- Travel route arcs implemented in the unified interests canvas with animated path traces.
-- Photography focus behavior implemented via movable lens overlay and spatial reveal in interests canvas.
-- City-linked interactions are represented through city track controls and status channel updates.
-
-- Music + Finance:
-- Thin signal wave line is continuously animated in interests canvas.
-- Music mode increases oscillation frequency/pacing.
-- Finance mode applies growth-biased curve behavior inspired by compound-growth logic.
-- Compound formula language is explicitly present as `A = P · (1 + r)^t`.
-
-## Design Decisions
-
-- Removed gray hover fills rather than replacing them with other block backgrounds.
-- Kept interaction motifs abstract and editorial; no dashboard/player/planner widgets were introduced.
-- Kept the page single-page, premium-artistic, and restrained in accordance with S005 contract boundaries.
+- AI Agent: autonomous cursor + bright scan sweep + agent field response.
+- Travel: route traces and coordinate-style trajectory feedback in interests.
+- Photography: focus lens and exposure-like scan/lens response.
+- Music: stronger frequency pacing and mode-differentiated oscillation.
+- Finance: abstract signal trend mode + dynamic compound formula jumping.
 
 ## Unresolved Limitations
 
-- Real copy, project evidence, and real contact endpoints remain placeholders.
-- Branded media assets and final typography assets are still pending.
-
-## Recommended Future Evaluator Focus
-
-- Verify no pale-gray hover boxes remain on major interactive components.
-- Verify one unified interests section exists and interest dynamics are no longer embedded in About/Projects/Experience.
-- Verify command parsing is strict allowlist behavior.
-- Verify dynamic_effects.md mapping fidelity is stronger than prior S005 pass.
-- Verify responsive behavior and `%SystemDrive%` non-interference.
+- Real content, links, and media assets remain placeholders.
+- Final brand typography assets are still not provided.
 
 ## Git Commit Hash
 
-- f96fe25423810747935ed8ce03679efdb8f7fe66
+- 18f855b2193cd0fc9e4822dad01e383aaa712466

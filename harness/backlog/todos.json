@@ -678,8 +678,8 @@
         "depends_on":  [
 
                        ],
-        "notes":  "Implemented in S005 follow-up after manual review replanning.",
-        "last_updated_at":  "2026-03-29T22:23:40+08:00",
+        "notes":  "Implemented in S005 same-sprint follow-up pass after user review findings.",
+        "last_updated_at":  "2026-03-29T23:21:58.0689552+08:00",
         "last_updated_by":  "generator"
     },
     {
@@ -702,8 +702,8 @@
         "depends_on":  [
                            "TODO-029"
                        ],
-        "notes":  "Implemented in S005 follow-up after manual review replanning.",
-        "last_updated_at":  "2026-03-29T22:23:40+08:00",
+        "notes":  "Implemented in S005 same-sprint follow-up pass after user review findings.",
+        "last_updated_at":  "2026-03-29T23:21:58.0689552+08:00",
         "last_updated_by":  "generator"
     },
     {
@@ -726,8 +726,8 @@
         "depends_on":  [
                            "TODO-030"
                        ],
-        "notes":  "Implemented in S005 follow-up after manual review replanning.",
-        "last_updated_at":  "2026-03-29T22:23:40+08:00",
+        "notes":  "Implemented in S005 same-sprint follow-up pass after user review findings.",
+        "last_updated_at":  "2026-03-29T23:21:58.0689552+08:00",
         "last_updated_by":  "generator"
     },
     {
@@ -751,8 +751,8 @@
                            "TODO-030",
                            "TODO-031"
                        ],
-        "notes":  "Implemented in S005 follow-up after manual review replanning.",
-        "last_updated_at":  "2026-03-29T22:23:40+08:00",
+        "notes":  "Implemented in S005 same-sprint follow-up pass after user review findings.",
+        "last_updated_at":  "2026-03-29T23:21:58.0689552+08:00",
         "last_updated_by":  "generator"
     },
     {
@@ -778,8 +778,8 @@
                            "TODO-031",
                            "TODO-032"
                        ],
-        "notes":  "Implemented in S005 follow-up after manual review replanning.",
-        "last_updated_at":  "2026-03-29T22:23:40+08:00",
+        "notes":  "Implemented in S005 same-sprint follow-up pass after user review findings.",
+        "last_updated_at":  "2026-03-29T23:21:58.0689552+08:00",
         "last_updated_by":  "generator"
     }
 ]

@@ -3,7 +3,7 @@
     "phase":  "implementation_done",
     "status":  "active",
     "active_sprint":  "S005",
-    "last_updated_at":  "2026-03-29T22:24:46+08:00",
+    "last_updated_at":  "2026-03-29T23:21:58.0689552+08:00",
     "last_updated_by":  "generator",
     "current_scope":  [
                           "TODO-029",
@@ -12,7 +12,7 @@
                           "TODO-032",
                           "TODO-033"
                       ],
-    "last_commit":  "f96fe25423810747935ed8ce03679efdb8f7fe66",
+    "last_commit":  "18f855b2193cd0fc9e4822dad01e383aaa712466",
     "last_evaluation":  "FAIL",
-    "resume_from":  "S005 follow-up implementation complete. Evaluator should validate CHECK-509 through CHECK-515 against the replanned contract."
+    "resume_from":  "S005 additional same-sprint fixes are complete. Evaluator should validate the five manual review findings and CHECK-509 through CHECK-515."
 }
