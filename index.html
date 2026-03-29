@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Homepage | Atelier Edition</title>
+    <title>Personal Homepage | Field Notes Edition</title>
     <meta
       name="description"
-      content="A single-page personal homepage with a premium editorial visual direction."
+      content="A single-page personal homepage with an integrated premium-artistic composition and interest-driven interaction motifs."
     />
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles.css" />
@@ -37,30 +37,33 @@
     <main id="main">
       <section class="hero section reveal" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">ATELIER PORTFOLIO</p>
+          <p class="eyebrow">FIELD NOTES / PERSONAL EDITION</p>
           <h1 id="hero-title">你好，我是你的名字（待替换）</h1>
           <p class="intro">
-            Frontend developer building high-touch digital experiences with
-            rigorous engineering and editorial visual direction. Current text is
-            placeholder and should be replaced with your personal narrative.
+            Computer science student focused on interface craft, AI-agent
+            workflows, and story-driven web experiences. This text is still a
+            placeholder and should be replaced with your own narrative.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#projects">View Projects</a>
             <a class="btn btn-secondary" href="#contact">Get In Touch</a>
           </div>
           <ul class="highlights" aria-label="Quick highlights">
-            <li>3+ years placeholder experience</li>
-            <li>React / TypeScript / Design Systems</li>
-            <li>Open for remote collaboration</li>
+            <li>CS student / systems thinker</li>
+            <li>AI Agent orchestration interest</li>
+            <li>Travel + photography inspired maker</li>
           </ul>
         </div>
         <div class="hero-art" aria-hidden="true">
           <div class="hero-frame">
-            <p>Selected works and crafted interface systems.</p>
+            <p>Interaction signatures from code, routes, and light studies.</p>
+          </div>
+          <div class="agent-mesh" data-agent-mesh>
+            <div class="mesh-core"></div>
           </div>
           <div class="hero-badge">
             <span>Edition</span>
-            <strong>02</strong>
+            <strong>03</strong>
           </div>
         </div>
       </section>
@@ -70,22 +73,29 @@
           <p class="eyebrow">Background</p>
           <h2>About</h2>
         </div>
-        <p>
-          This block is placeholder copy. Replace with your concise background,
-          values, and the kind of product problems you solve best. Keep this
-          section short, specific, and easy to scan.
-        </p>
+        <div class="flow-copy">
+          <p>
+            I design and build web experiences with a technical-first mindset
+            and a visual language shaped by observation: terminal logic,
+            travel movement, and photography framing. Replace this placeholder
+            with your real background and personal values.
+          </p>
+          <p>
+            The goal is not to make a flashy toy. The goal is to create work
+            that is precise, memorable, and useful.
+          </p>
+        </div>
       </section>
 
       <section id="projects" class="section reveal">
         <div class="section-heading">
           <p class="eyebrow">Featured</p>
           <h2>Projects</h2>
-          <p>Replace each placeholder card with a real case study.</p>
+          <p>Replace each placeholder with a real case study and measurable outcome.</p>
         </div>
-        <div class="project-grid">
-          <article class="project-card">
-            <p class="card-tag">Product UX</p>
+        <div class="project-stream">
+          <article class="project-entry" data-viewfinder>
+            <p class="entry-tag">Product UX</p>
             <h3>Project Alpha (Placeholder)</h3>
             <p>
               A dashboard redesign project focusing on task clarity, data
@@ -93,8 +103,8 @@
             </p>
             <a href="#contact">Request walkthrough</a>
           </article>
-          <article class="project-card">
-            <p class="card-tag">Marketing Build</p>
+          <article class="project-entry" data-viewfinder>
+            <p class="entry-tag">Marketing Build</p>
             <h3>Project Beta (Placeholder)</h3>
             <p>
               Marketing page build with reusable section components, animation
@@ -102,8 +112,8 @@
             </p>
             <a href="#contact">Ask for details</a>
           </article>
-          <article class="project-card">
-            <p class="card-tag">Design System</p>
+          <article class="project-entry" data-viewfinder>
+            <p class="entry-tag">Design System</p>
             <h3>Project Gamma (Placeholder)</h3>
             <p>
               UI kit setup for multi-team consistency: tokens, primitives, and
@@ -118,6 +128,11 @@
         <div class="section-heading">
           <p class="eyebrow">Trajectory</p>
           <h2>Experience</h2>
+        </div>
+        <div class="travel-route" aria-hidden="true">
+          <svg viewBox="0 0 600 120" preserveAspectRatio="none">
+            <path d="M10 80 C110 20, 180 110, 280 54 C360 10, 430 112, 590 40" />
+          </svg>
         </div>
         <ol class="timeline">
           <li>
@@ -136,9 +151,7 @@
           <p class="eyebrow">Connection</p>
           <h2>Contact</h2>
         </div>
-        <p>
-          Replace the placeholder links below with your real channels.
-        </p>
+        <p>Replace the placeholder links below with your real channels.</p>
         <div class="contact-actions">
           <a class="btn btn-primary" href="mailto:your-email@example.com">Email Me</a>
           <a class="btn btn-secondary" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
