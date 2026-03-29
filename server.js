@@ -31,7 +31,8 @@ function resolveRequestPath(urlPath) {
 }
 
 const server = http.createServer((req, res) => {
-  const resolved = resolveRequestPath(req.url || "/");
+  const rawUrl = req.url || "/";
+  const resolved = resolveRequestPath(rawUrl);
   if (!resolved) {
     res.writeHead(400, { "Content-Type": "text/plain; charset=utf-8" });
     res.end("Bad request");
@@ -39,6 +40,20 @@ const server = http.createServer((req, res) => {
   }
 
   fs.stat(resolved, (statErr, stats) => {
+    if ((statErr || !stats.isFile()) && rawUrl.split("?")[0] === "/favicon.ico") {
+      const svgFallback = path.join(ROOT, "favicon.svg");
+      fs.stat(svgFallback, (fallbackErr, fallbackStats) => {
+        if (fallbackErr || !fallbackStats.isFile()) {
+          res.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
+          res.end("Not found");
+          return;
+        }
+        res.writeHead(200, { "Content-Type": MIME[".svg"] });
+        fs.createReadStream(svgFallback).pipe(res);
+      });
+      return;
+    }
+
     if (statErr || !stats.isFile()) {
       res.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
       res.end("Not found");

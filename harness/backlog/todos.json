@@ -1,105 +1,294 @@
-[
-  {
-    "id": "TODO-001",
-    "title": "Initialize a frontend app scaffold for the personal homepage",
-    "status": "done",
-    "priority": "high",
-    "sprint_id": "S001",
-    "type": "setup",
-    "summary": "Create the project scaffold, dependency manifest, and runnable dev scripts for a single-page personal homepage.",
-    "acceptance_criteria": [
-      "A standard frontend project structure exists in the repository root",
-      "The repo contains package metadata and a documented local start command",
-      "No application code is placed under the harness directory"
-    ],
-    "depends_on": []
-  },
-  {
-    "id": "TODO-002",
-    "title": "Establish the homepage information architecture and section skeleton",
-    "status": "done",
-    "priority": "high",
-    "sprint_id": "S001",
-    "type": "feature",
-    "summary": "Create the single-page structure for navigation, hero, about, projects, experience or education, contact, and footer.",
-    "acceptance_criteria": [
-      "The homepage contains at least hero, about, projects, and contact sections",
-      "Section anchors or navigation targets exist for the visible sections",
-      "The layout is coherent on desktop and mobile widths"
-    ],
-    "depends_on": [
-      "TODO-001"
-    ]
-  },
-  {
-    "id": "TODO-003",
-    "title": "Define the initial visual baseline and reusable styling tokens",
-    "status": "done",
-    "priority": "medium",
-    "sprint_id": "S001",
-    "type": "design",
-    "summary": "Set the typography, palette, spacing, and core surface treatments for a professional personal homepage.",
-    "acceptance_criteria": [
-      "Global styles or theme tokens are defined in a central location",
-      "The homepage uses a consistent visual system across sections",
-      "The design direction is intentionally minimal and professional rather than placeholder-default"
-    ],
-    "depends_on": [
-      "TODO-001"
-    ]
-  },
-  {
-    "id": "TODO-004",
-    "title": "Populate the first version with placeholder content and working CTA targets",
-    "status": "done",
-    "priority": "medium",
-    "sprint_id": "S001",
-    "type": "content",
-    "summary": "Use placeholder profile, project, and contact content so the generator can deliver a fully navigable first version before real copy arrives.",
-    "acceptance_criteria": [
-      "No major section is left visually empty",
-      "Buttons and links point to valid placeholders, anchors, or external targets",
-      "Text clearly signals where the user must later replace placeholder content"
-    ],
-    "depends_on": [
-      "TODO-002",
-      "TODO-003"
-    ]
-  },
-  {
-    "id": "TODO-005",
-    "title": "Add baseline accessibility and responsive behavior",
-    "status": "done",
-    "priority": "medium",
-    "sprint_id": "S001",
-    "type": "quality",
-    "summary": "Ensure semantic structure, keyboard-reachable navigation, readable contrast, and mobile-friendly layout behavior.",
-    "acceptance_criteria": [
-      "Semantic landmarks and heading hierarchy are present",
-      "Navigation and primary CTA controls are keyboard reachable",
-      "No obvious layout breakage appears at narrow mobile width"
-    ],
-    "depends_on": [
-      "TODO-002",
-      "TODO-003"
-    ]
-  },
-  {
-    "id": "TODO-006",
-    "title": "Update repository instructions for generator handoff and local run",
-    "status": "done",
-    "priority": "medium",
-    "sprint_id": "S001",
-    "type": "docs",
-    "summary": "Document how to run the app locally and capture any assumptions that remain unresolved after Sprint S001.",
-    "acceptance_criteria": [
-      "README or equivalent contains the install and dev commands",
-      "Remaining content or asset gaps are explicitly called out",
-      "The repository can be resumed by a fresh-context agent"
-    ],
-    "depends_on": [
-      "TODO-001",
-      "TODO-002"
-    ]
-  }
+﻿[
+    {
+        "id":  "TODO-001",
+        "title":  "Initialize a frontend app scaffold for the personal homepage",
+        "category":  "setup",
+        "priority":  "high",
+        "description":  "Create the project scaffold, package metadata, and runnable local scripts for a single-page personal homepage.",
+        "acceptance_criteria":  [
+                                    "A standard frontend project structure exists in the repository root",
+                                    "The repo contains package metadata and a documented local start command",
+                                    "No application code is placed under the harness directory"
+                                ],
+        "verification_steps":  [
+                                   "Confirm package metadata exists in the repository root",
+                                   "Confirm the documented local start command runs",
+                                   "Confirm application code lives outside harness/"
+                               ],
+        "status":  "verified",
+        "passes":  true,
+        "sprint_id":  "S001",
+        "depends_on":  [
+
+                       ],
+        "notes":  "Verified during Sprint S001 evaluation.",
+        "last_updated_at":  "2026-03-29T15:29:09+08:00",
+        "last_updated_by":  "evaluator"
+    },
+    {
+        "id":  "TODO-002",
+        "title":  "Establish the homepage information architecture and section skeleton",
+        "category":  "feature",
+        "priority":  "high",
+        "description":  "Create the single-page structure for navigation, hero, about, projects, experience, contact, and footer.",
+        "acceptance_criteria":  [
+                                    "The homepage contains at least hero, about, projects, and contact sections",
+                                    "Section anchors or navigation targets exist for the visible sections",
+                                    "The layout is coherent on desktop and mobile widths"
+                                ],
+        "verification_steps":  [
+                                   "Inspect source and confirm required sections exist",
+                                   "Confirm visible navigation anchors point to valid targets",
+                                   "Confirm the layout remains coherent across viewport sizes"
+                               ],
+        "status":  "verified",
+        "passes":  true,
+        "sprint_id":  "S001",
+        "depends_on":  [
+                           "TODO-001"
+                       ],
+        "notes":  "Verified during Sprint S001 evaluation.",
+        "last_updated_at":  "2026-03-29T15:29:09+08:00",
+        "last_updated_by":  "evaluator"
+    },
+    {
+        "id":  "TODO-003",
+        "title":  "Define the initial visual baseline and reusable styling tokens",
+        "category":  "design",
+        "priority":  "medium",
+        "description":  "Set the typography, palette, spacing, and core surface treatments for a professional personal homepage.",
+        "acceptance_criteria":  [
+                                    "Global styles or theme tokens are defined in a central location",
+                                    "The homepage uses a consistent visual system across sections",
+                                    "The design direction is intentionally minimal and professional rather than placeholder-default"
+                                ],
+        "verification_steps":  [
+                                   "Inspect the stylesheet for centralized tokens or shared variables",
+                                   "Confirm section styling is visually consistent",
+                                   "Confirm the result avoids raw default framework styling"
+                               ],
+        "status":  "verified",
+        "passes":  true,
+        "sprint_id":  "S001",
+        "depends_on":  [
+                           "TODO-001"
+                       ],
+        "notes":  "Verified during Sprint S001 evaluation.",
+        "last_updated_at":  "2026-03-29T15:29:09+08:00",
+        "last_updated_by":  "evaluator"
+    },
+    {
+        "id":  "TODO-004",
+        "title":  "Populate the first version with placeholder content and working CTA targets",
+        "category":  "content",
+        "priority":  "medium",
+        "description":  "Use placeholder profile, project, and contact content so the first version is fully navigable before real copy arrives.",
+        "acceptance_criteria":  [
+                                    "No major section is left visually empty",
+                                    "Buttons and links point to valid placeholders, anchors, or external targets",
+                                    "Text clearly signals where the user must later replace placeholder content"
+                                ],
+        "verification_steps":  [
+                                   "Review the page for empty major sections",
+                                   "Click or inspect CTA targets for valid placeholders or anchors",
+                                   "Confirm placeholder copy is explicit rather than misleading"
+                               ],
+        "status":  "verified",
+        "passes":  true,
+        "sprint_id":  "S001",
+        "depends_on":  [
+                           "TODO-002",
+                           "TODO-003"
+                       ],
+        "notes":  "Verified during Sprint S001 evaluation.",
+        "last_updated_at":  "2026-03-29T15:29:09+08:00",
+        "last_updated_by":  "evaluator"
+    },
+    {
+        "id":  "TODO-005",
+        "title":  "Add baseline accessibility and responsive behavior",
+        "category":  "quality",
+        "priority":  "medium",
+        "description":  "Ensure semantic structure, keyboard-reachable navigation, readable contrast, and mobile-friendly layout behavior.",
+        "acceptance_criteria":  [
+                                    "Semantic landmarks and heading hierarchy are present",
+                                    "Navigation and primary CTA controls are keyboard reachable",
+                                    "No obvious layout breakage appears at narrow mobile width"
+                                ],
+        "verification_steps":  [
+                                   "Inspect the DOM for semantic landmarks and headings",
+                                   "Confirm navigation and primary controls are keyboard reachable",
+                                   "Check for blocking layout breakage on mobile width"
+                               ],
+        "status":  "verified",
+        "passes":  true,
+        "sprint_id":  "S001",
+        "depends_on":  [
+                           "TODO-002",
+                           "TODO-003"
+                       ],
+        "notes":  "Verified during Sprint S001 evaluation.",
+        "last_updated_at":  "2026-03-29T15:29:09+08:00",
+        "last_updated_by":  "evaluator"
+    },
+    {
+        "id":  "TODO-006",
+        "title":  "Update repository instructions for generator handoff and local run",
+        "category":  "docs",
+        "priority":  "medium",
+        "description":  "Document how to run the app locally and capture unresolved assumptions after Sprint S001.",
+        "acceptance_criteria":  [
+                                    "README or equivalent contains the install and dev commands",
+                                    "Remaining content or asset gaps are explicitly called out",
+                                    "The repository can be resumed by a fresh-context agent"
+                                ],
+        "verification_steps":  [
+                                   "Inspect README for local run steps",
+                                   "Confirm unresolved assumptions are recorded",
+                                   "Confirm a fresh agent could resume from the harness artifacts"
+                               ],
+        "status":  "verified",
+        "passes":  true,
+        "sprint_id":  "S001",
+        "depends_on":  [
+                           "TODO-001",
+                           "TODO-002"
+                       ],
+        "notes":  "Verified during Sprint S001 evaluation.",
+        "last_updated_at":  "2026-03-29T15:29:09+08:00",
+        "last_updated_by":  "evaluator"
+    },
+    {
+        "id":  "TODO-007",
+        "title":  "Define a bold visual direction and premium design system for the homepage",
+        "category":  "design",
+        "priority":  "high",
+        "description":  "Establish a clear aesthetic concept, upgraded typography pairings, color system, spacing rhythm, and surface language that move the homepage beyond a generic starter look.",
+        "acceptance_criteria":  [
+                                    "The sprint starts from one explicit aesthetic direction rather than generic polishing",
+                                    "Typography, color, spacing, and component treatments are defined as a cohesive system",
+                                    "The chosen direction avoids default fonts, generic AI gradients, and template-like styling"
+                                ],
+        "verification_steps":  [
+                                   "Inspect the final stylesheet for a coherent token system",
+                                   "Confirm a named aesthetic direction is reflected in the UI and generator notes",
+                                   "Confirm the design avoids banned generic patterns such as purple-on-white hero gradients and default font stacks"
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S002",
+        "depends_on":  [
+
+                       ],
+        "notes":  "Implemented in Sprint S002 visual redesign.",
+        "last_updated_at":  "2026-03-29T16:58:03+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-008",
+        "title":  "Redesign the hero into a memorable visual centerpiece",
+        "category":  "feature",
+        "priority":  "high",
+        "description":  "Rebuild the hero with stronger spatial composition, more intentional hierarchy, and one memorable visual signature that immediately distinguishes the homepage.",
+        "acceptance_criteria":  [
+                                    "The hero uses an intentional composition rather than a standard centered stack",
+                                    "The first screen contains a memorable focal device such as layered forms, editorial framing, or a crafted visual motif",
+                                    "Primary CTA hierarchy remains clear while the hero gains stronger visual impact"
+                                ],
+        "verification_steps":  [
+                                   "Inspect the hero layout on desktop and mobile",
+                                   "Confirm the hero contains a distinct visual motif beyond simple text-and-button stacking",
+                                   "Confirm CTA visibility and readability remain intact"
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S002",
+        "depends_on":  [
+                           "TODO-007"
+                       ],
+        "notes":  "Implemented in Sprint S002 visual redesign.",
+        "last_updated_at":  "2026-03-29T16:58:03+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-009",
+        "title":  "Upgrade section layouts with editorial rhythm, depth, and atmosphere",
+        "category":  "feature",
+        "priority":  "high",
+        "description":  "Refine the section compositions, cards, dividers, and backgrounds to create a premium editorial flow with depth, asymmetry, and stronger atmosphere.",
+        "acceptance_criteria":  [
+                                    "At least the hero, projects, and contact sections receive visibly improved layout composition",
+                                    "Background layers, spacing rhythm, and surface treatments create a more immersive page atmosphere",
+                                    "The page no longer reads as a plain stacked template from top to bottom"
+                                ],
+        "verification_steps":  [
+                                   "Inspect section transitions and composition across the page",
+                                   "Confirm there are intentional depth or atmospheric treatments rather than flat single-color blocks",
+                                   "Confirm the layout remains coherent while becoming more visually distinctive"
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S002",
+        "depends_on":  [
+                           "TODO-007",
+                           "TODO-008"
+                       ],
+        "notes":  "Implemented in Sprint S002 visual redesign.",
+        "last_updated_at":  "2026-03-29T16:58:03+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-010",
+        "title":  "Introduce high-impact motion and interaction polish without scope creep",
+        "category":  "quality",
+        "priority":  "medium",
+        "description":  "Add restrained but meaningful motion, hover states, and reveal behaviors that reinforce the new art direction while keeping the page lightweight and accessible.",
+        "acceptance_criteria":  [
+                                    "The page uses a few deliberate motion moments instead of scattered generic micro-interactions",
+                                    "Motion supports hierarchy and mood without blocking usability or navigation",
+                                    "Interactive states feel intentional and consistent with the chosen visual direction"
+                                ],
+        "verification_steps":  [
+                                   "Confirm motion appears in high-impact moments such as initial reveals or section transitions",
+                                   "Confirm hover and focus states are visually intentional",
+                                   "Confirm reduced-complexity behavior remains usable on mobile and keyboard navigation"
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S002",
+        "depends_on":  [
+                           "TODO-007",
+                           "TODO-009"
+                       ],
+        "notes":  "Implemented in Sprint S002 visual redesign.",
+        "last_updated_at":  "2026-03-29T16:58:03+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-011",
+        "title":  "Close obvious polish gaps and document the visual decisions",
+        "category":  "docs",
+        "priority":  "medium",
+        "description":  "Address obvious polish gaps such as the missing favicon if feasible within the static setup and document the final art direction, design decisions, and remaining content limitations.",
+        "acceptance_criteria":  [
+                                    "The page no longer emits an avoidable favicon 404 if this can be solved within current stack boundaries",
+                                    "Generator notes describe the chosen aesthetic direction, font decisions, palette logic, and signature visual motif",
+                                    "README or notes clearly separate finished polish work from remaining content placeholder work"
+                                ],
+        "verification_steps":  [
+                                   "Check whether favicon requests succeed or a reasoned exception is documented",
+                                   "Review generator notes for explicit visual decision rationale",
+                                   "Confirm remaining content gaps are still documented after the redesign"
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S002",
+        "depends_on":  [
+                           "TODO-007",
+                           "TODO-009"
+                       ],
+        "notes":  "Implemented in Sprint S002 visual redesign.",
+        "last_updated_at":  "2026-03-29T16:58:03+08:00",
+        "last_updated_by":  "generator"
+    }
 ]

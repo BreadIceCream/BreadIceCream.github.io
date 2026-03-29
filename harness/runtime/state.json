@@ -1,19 +1,18 @@
-{
-  "project_id": "personal-homepage",
-  "phase": "implementation",
-  "status": "ready_for_evaluation",
-  "active_sprint": "S001",
-  "last_updated_at": "2026-03-29T15:16:49+08:00",
-  "last_updated_by": "generator",
-  "current_scope": [
-    "TODO-001",
-    "TODO-002",
-    "TODO-003",
-    "TODO-004",
-    "TODO-005",
-    "TODO-006"
-  ],
-  "last_commit": "d90a7b57b8d03470f3a24f6132cc52d03d35c09f",
-  "last_evaluation": null,
-  "resume_from": "Evaluator should validate S001 outputs, confirm runtime and UI checks, and verify %SystemDrive% remained untouched."
+﻿{
+    "project_id":  "personal-homepage",
+    "phase":  "implementing",
+    "status":  "active",
+    "active_sprint":  "S002",
+    "last_updated_at":  "2026-03-29T16:58:03+08:00",
+    "last_updated_by":  "generator",
+    "current_scope":  [
+                          "TODO-007",
+                          "TODO-008",
+                          "TODO-009",
+                          "TODO-010",
+                          "TODO-011"
+                      ],
+    "last_commit":  "887f91046ddefe2dcb3188db803a7d29c8c5895c",
+    "last_evaluation":  "PASS",
+    "resume_from":  "Generator implemented S002 redesign. Run evaluator against S002 contract and verification checks."
 }

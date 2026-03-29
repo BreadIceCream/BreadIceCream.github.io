@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Homepage | Placeholder</title>
+    <title>Personal Homepage | Atelier Edition</title>
     <meta
       name="description"
-      content="Single-page personal homepage scaffold with placeholder content for Sprint S001."
+      content="A single-page personal homepage with a premium editorial visual direction."
     />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -34,27 +35,41 @@
     </header>
 
     <main id="main">
-      <section class="hero section reveal">
-        <p class="eyebrow">PERSONAL HOMEPAGE</p>
-        <h1>你好，我是你的名字（待替换）</h1>
-        <p class="intro">
-          Frontend developer focused on expressive interfaces, robust UX details,
-          and reliable delivery. This page currently uses placeholder profile
-          content and should be replaced with your real story.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">View Projects</a>
-          <a class="btn btn-secondary" href="#contact">Get In Touch</a>
+      <section class="hero section reveal" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">ATELIER PORTFOLIO</p>
+          <h1 id="hero-title">你好，我是你的名字（待替换）</h1>
+          <p class="intro">
+            Frontend developer building high-touch digital experiences with
+            rigorous engineering and editorial visual direction. Current text is
+            placeholder and should be replaced with your personal narrative.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn btn-secondary" href="#contact">Get In Touch</a>
+          </div>
+          <ul class="highlights" aria-label="Quick highlights">
+            <li>3+ years placeholder experience</li>
+            <li>React / TypeScript / Design Systems</li>
+            <li>Open for remote collaboration</li>
+          </ul>
         </div>
-        <ul class="highlights" aria-label="Quick highlights">
-          <li>3+ years placeholder experience</li>
-          <li>React / TypeScript / Design Systems</li>
-          <li>Open for remote collaboration</li>
-        </ul>
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-frame">
+            <p>Selected works and crafted interface systems.</p>
+          </div>
+          <div class="hero-badge">
+            <span>Edition</span>
+            <strong>02</strong>
+          </div>
+        </div>
       </section>
 
       <section id="about" class="section reveal">
-        <h2>About</h2>
+        <div class="section-heading">
+          <p class="eyebrow">Background</p>
+          <h2>About</h2>
+        </div>
         <p>
           This block is placeholder copy. Replace with your concise background,
           values, and the kind of product problems you solve best. Keep this
@@ -64,11 +79,13 @@
 
       <section id="projects" class="section reveal">
         <div class="section-heading">
+          <p class="eyebrow">Featured</p>
           <h2>Projects</h2>
           <p>Replace each placeholder card with a real case study.</p>
         </div>
         <div class="project-grid">
           <article class="project-card">
+            <p class="card-tag">Product UX</p>
             <h3>Project Alpha (Placeholder)</h3>
             <p>
               A dashboard redesign project focusing on task clarity, data
@@ -77,6 +94,7 @@
             <a href="#contact">Request walkthrough</a>
           </article>
           <article class="project-card">
+            <p class="card-tag">Marketing Build</p>
             <h3>Project Beta (Placeholder)</h3>
             <p>
               Marketing page build with reusable section components, animation
@@ -85,6 +103,7 @@
             <a href="#contact">Ask for details</a>
           </article>
           <article class="project-card">
+            <p class="card-tag">Design System</p>
             <h3>Project Gamma (Placeholder)</h3>
             <p>
               UI kit setup for multi-team consistency: tokens, primitives, and
@@ -96,7 +115,10 @@
       </section>
 
       <section id="experience" class="section reveal">
-        <h2>Experience</h2>
+        <div class="section-heading">
+          <p class="eyebrow">Trajectory</p>
+          <h2>Experience</h2>
+        </div>
         <ol class="timeline">
           <li>
             <h3>Senior Frontend Engineer · Placeholder Co.</h3>
@@ -110,7 +132,10 @@
       </section>
 
       <section id="contact" class="section reveal">
-        <h2>Contact</h2>
+        <div class="section-heading">
+          <p class="eyebrow">Connection</p>
+          <h2>Contact</h2>
+        </div>
         <p>
           Replace the placeholder links below with your real channels.
         </p>

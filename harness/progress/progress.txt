@@ -1,19 +1,18 @@
-Current phase: implementation
-Active sprint: S001
-Current scope: TODO-001, TODO-002, TODO-003, TODO-004, TODO-005, TODO-006
+Current phase: implementing
+Active sprint: S002
+Current scope: TODO-007, TODO-008, TODO-009, TODO-010, TODO-011
 
 Last completed actions:
-- Implemented a runnable static frontend scaffold in the repository root
-- Built a single-page homepage with navigation, hero, about, projects, experience, and contact sections
-- Added a reusable style token baseline, responsive behavior, and basic accessibility landmarks
-- Added placeholder content with valid CTA or anchor targets
-- Updated README with local run instructions and unresolved content gaps
-- Updated sprint artifacts for evaluator handoff
+- Implemented S002 visual redesign with a luxury-editorial art direction
+- Rebuilt hero composition with a split layout, layered visual motif, and premium hierarchy
+- Upgraded section rhythm, card surfaces, typography, and atmospheric background system
+- Added restrained high-impact motion (staggered reveals + subtle hero parallax with reduced-motion fallback)
+- Added `favicon.svg` and server fallback for `/favicon.ico` to eliminate avoidable 404s
+- Marked TODO-007 through TODO-011 as implemented in backlog and sprint todo snapshot
 
 Open issues:
-- Repository still contains the unrelated %SystemDrive% directory and it must remain untouched
-- Real copy, profile assets, and final design preferences have not been provided by the user
-- Evaluator verification is still pending
+- Content, links, and profile assets remain placeholders by contract
+- `%SystemDrive%/` remains in workspace and should stay untouched
 
 Next recommended step:
-- Evaluator should run Sprint S001 verification checks and record pass or fail in harness/sprints/S001/evaluator_report.md
+- Finalize generator notes with commit hash, set phase to implementation_done, then hand off to evaluator for S002 verification
