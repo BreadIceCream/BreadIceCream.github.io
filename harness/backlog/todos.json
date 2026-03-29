@@ -1,19 +1,15 @@
 ﻿[
     {
         "id":  "TODO-001",
-        "title":  "Initialize a frontend app scaffold for the personal homepage",
+        "title":  "Initialize frontend scaffold",
         "category":  "setup",
         "priority":  "high",
-        "description":  "Create the project scaffold, package metadata, and runnable local scripts for a single-page personal homepage.",
+        "description":  "Create the initial single-page project scaffold.",
         "acceptance_criteria":  [
-                                    "A standard frontend project structure exists in the repository root",
-                                    "The repo contains package metadata and a documented local start command",
-                                    "No application code is placed under the harness directory"
+                                    "Frontend scaffold exists."
                                 ],
         "verification_steps":  [
-                                   "Confirm package metadata exists in the repository root",
-                                   "Confirm the documented local start command runs",
-                                   "Confirm application code lives outside harness/"
+                                   "Inspect root project files."
                                ],
         "status":  "verified",
         "passes":  true,
@@ -21,25 +17,21 @@
         "depends_on":  [
 
                        ],
-        "notes":  "Verified during Sprint S001 evaluation.",
+        "notes":  "Verified in S001.",
         "last_updated_at":  "2026-03-29T15:29:09+08:00",
         "last_updated_by":  "evaluator"
     },
     {
         "id":  "TODO-002",
-        "title":  "Establish the homepage information architecture and section skeleton",
+        "title":  "Establish section skeleton",
         "category":  "feature",
         "priority":  "high",
-        "description":  "Create the single-page structure for navigation, hero, about, projects, experience, contact, and footer.",
+        "description":  "Create the single-page information architecture.",
         "acceptance_criteria":  [
-                                    "The homepage contains at least hero, about, projects, and contact sections",
-                                    "Section anchors or navigation targets exist for the visible sections",
-                                    "The layout is coherent on desktop and mobile widths"
+                                    "Required sections exist."
                                 ],
         "verification_steps":  [
-                                   "Inspect source and confirm required sections exist",
-                                   "Confirm visible navigation anchors point to valid targets",
-                                   "Confirm the layout remains coherent across viewport sizes"
+                                   "Inspect section anchors and layout."
                                ],
         "status":  "verified",
         "passes":  true,
@@ -47,25 +39,21 @@
         "depends_on":  [
                            "TODO-001"
                        ],
-        "notes":  "Verified during Sprint S001 evaluation.",
+        "notes":  "Verified in S001.",
         "last_updated_at":  "2026-03-29T15:29:09+08:00",
         "last_updated_by":  "evaluator"
     },
     {
         "id":  "TODO-003",
-        "title":  "Define the initial visual baseline and reusable styling tokens",
+        "title":  "Define initial visual baseline",
         "category":  "design",
         "priority":  "medium",
-        "description":  "Set the typography, palette, spacing, and core surface treatments for a professional personal homepage.",
+        "description":  "Create initial tokens and styling baseline.",
         "acceptance_criteria":  [
-                                    "Global styles or theme tokens are defined in a central location",
-                                    "The homepage uses a consistent visual system across sections",
-                                    "The design direction is intentionally minimal and professional rather than placeholder-default"
+                                    "Shared styling system exists."
                                 ],
         "verification_steps":  [
-                                   "Inspect the stylesheet for centralized tokens or shared variables",
-                                   "Confirm section styling is visually consistent",
-                                   "Confirm the result avoids raw default framework styling"
+                                   "Inspect core styles."
                                ],
         "status":  "verified",
         "passes":  true,
@@ -73,25 +61,21 @@
         "depends_on":  [
                            "TODO-001"
                        ],
-        "notes":  "Verified during Sprint S001 evaluation.",
+        "notes":  "Verified in S001.",
         "last_updated_at":  "2026-03-29T15:29:09+08:00",
         "last_updated_by":  "evaluator"
     },
     {
         "id":  "TODO-004",
-        "title":  "Populate the first version with placeholder content and working CTA targets",
+        "title":  "Add placeholder content",
         "category":  "content",
         "priority":  "medium",
-        "description":  "Use placeholder profile, project, and contact content so the first version is fully navigable before real copy arrives.",
+        "description":  "Populate the first version with placeholder content.",
         "acceptance_criteria":  [
-                                    "No major section is left visually empty",
-                                    "Buttons and links point to valid placeholders, anchors, or external targets",
-                                    "Text clearly signals where the user must later replace placeholder content"
+                                    "No major section is empty."
                                 ],
         "verification_steps":  [
-                                   "Review the page for empty major sections",
-                                   "Click or inspect CTA targets for valid placeholders or anchors",
-                                   "Confirm placeholder copy is explicit rather than misleading"
+                                   "Inspect content coverage."
                                ],
         "status":  "verified",
         "passes":  true,
@@ -100,25 +84,21 @@
                            "TODO-002",
                            "TODO-003"
                        ],
-        "notes":  "Verified during Sprint S001 evaluation.",
+        "notes":  "Verified in S001.",
         "last_updated_at":  "2026-03-29T15:29:09+08:00",
         "last_updated_by":  "evaluator"
     },
     {
         "id":  "TODO-005",
-        "title":  "Add baseline accessibility and responsive behavior",
+        "title":  "Add accessibility and responsiveness",
         "category":  "quality",
         "priority":  "medium",
-        "description":  "Ensure semantic structure, keyboard-reachable navigation, readable contrast, and mobile-friendly layout behavior.",
+        "description":  "Ensure the initial page is usable across devices.",
         "acceptance_criteria":  [
-                                    "Semantic landmarks and heading hierarchy are present",
-                                    "Navigation and primary CTA controls are keyboard reachable",
-                                    "No obvious layout breakage appears at narrow mobile width"
+                                    "Layout remains usable on mobile."
                                 ],
         "verification_steps":  [
-                                   "Inspect the DOM for semantic landmarks and headings",
-                                   "Confirm navigation and primary controls are keyboard reachable",
-                                   "Check for blocking layout breakage on mobile width"
+                                   "Inspect mobile behavior."
                                ],
         "status":  "verified",
         "passes":  true,
@@ -127,25 +107,21 @@
                            "TODO-002",
                            "TODO-003"
                        ],
-        "notes":  "Verified during Sprint S001 evaluation.",
+        "notes":  "Verified in S001.",
         "last_updated_at":  "2026-03-29T15:29:09+08:00",
         "last_updated_by":  "evaluator"
     },
     {
         "id":  "TODO-006",
-        "title":  "Update repository instructions for generator handoff and local run",
+        "title":  "Document local run instructions",
         "category":  "docs",
         "priority":  "medium",
-        "description":  "Document how to run the app locally and capture unresolved assumptions after Sprint S001.",
+        "description":  "Document how to run and resume the project.",
         "acceptance_criteria":  [
-                                    "README or equivalent contains the install and dev commands",
-                                    "Remaining content or asset gaps are explicitly called out",
-                                    "The repository can be resumed by a fresh-context agent"
+                                    "README contains local run steps."
                                 ],
         "verification_steps":  [
-                                   "Inspect README for local run steps",
-                                   "Confirm unresolved assumptions are recorded",
-                                   "Confirm a fresh agent could resume from the harness artifacts"
+                                   "Inspect README."
                                ],
         "status":  "verified",
         "passes":  true,
@@ -154,141 +130,234 @@
                            "TODO-001",
                            "TODO-002"
                        ],
-        "notes":  "Verified during Sprint S001 evaluation.",
+        "notes":  "Verified in S001.",
         "last_updated_at":  "2026-03-29T15:29:09+08:00",
         "last_updated_by":  "evaluator"
     },
     {
         "id":  "TODO-007",
-        "title":  "Define a bold visual direction and premium design system for the homepage",
+        "title":  "Define premium visual direction",
         "category":  "design",
         "priority":  "high",
-        "description":  "Establish a clear aesthetic concept, upgraded typography pairings, color system, spacing rhythm, and surface language that move the homepage beyond a generic starter look.",
+        "description":  "Define the higher-end visual system for S002.",
         "acceptance_criteria":  [
-                                    "The sprint starts from one explicit aesthetic direction rather than generic polishing",
-                                    "Typography, color, spacing, and component treatments are defined as a cohesive system",
-                                    "The chosen direction avoids default fonts, generic AI gradients, and template-like styling"
+                                    "One clear art direction is visible."
                                 ],
         "verification_steps":  [
-                                   "Inspect the final stylesheet for a coherent token system",
-                                   "Confirm a named aesthetic direction is reflected in the UI and generator notes",
-                                   "Confirm the design avoids banned generic patterns such as purple-on-white hero gradients and default font stacks"
+                                   "Inspect palette, type, and surfaces."
                                ],
-        "status":  "implemented",
-        "passes":  false,
+        "status":  "verified",
+        "passes":  true,
         "sprint_id":  "S002",
         "depends_on":  [
 
                        ],
-        "notes":  "Implemented in Sprint S002 visual redesign.",
-        "last_updated_at":  "2026-03-29T16:58:03+08:00",
-        "last_updated_by":  "generator"
+        "notes":  "Verified in S002.",
+        "last_updated_at":  "2026-03-29T17:09:44+08:00",
+        "last_updated_by":  "evaluator"
     },
     {
         "id":  "TODO-008",
-        "title":  "Redesign the hero into a memorable visual centerpiece",
+        "title":  "Redesign hero centerpiece",
         "category":  "feature",
         "priority":  "high",
-        "description":  "Rebuild the hero with stronger spatial composition, more intentional hierarchy, and one memorable visual signature that immediately distinguishes the homepage.",
+        "description":  "Make the hero more visually distinctive.",
         "acceptance_criteria":  [
-                                    "The hero uses an intentional composition rather than a standard centered stack",
-                                    "The first screen contains a memorable focal device such as layered forms, editorial framing, or a crafted visual motif",
-                                    "Primary CTA hierarchy remains clear while the hero gains stronger visual impact"
+                                    "Hero has a memorable focal motif."
                                 ],
         "verification_steps":  [
-                                   "Inspect the hero layout on desktop and mobile",
-                                   "Confirm the hero contains a distinct visual motif beyond simple text-and-button stacking",
-                                   "Confirm CTA visibility and readability remain intact"
+                                   "Inspect hero composition."
                                ],
-        "status":  "implemented",
-        "passes":  false,
+        "status":  "verified",
+        "passes":  true,
         "sprint_id":  "S002",
         "depends_on":  [
                            "TODO-007"
                        ],
-        "notes":  "Implemented in Sprint S002 visual redesign.",
-        "last_updated_at":  "2026-03-29T16:58:03+08:00",
-        "last_updated_by":  "generator"
+        "notes":  "Verified in S002.",
+        "last_updated_at":  "2026-03-29T17:09:44+08:00",
+        "last_updated_by":  "evaluator"
     },
     {
         "id":  "TODO-009",
-        "title":  "Upgrade section layouts with editorial rhythm, depth, and atmosphere",
+        "title":  "Upgrade section atmosphere",
         "category":  "feature",
         "priority":  "high",
-        "description":  "Refine the section compositions, cards, dividers, and backgrounds to create a premium editorial flow with depth, asymmetry, and stronger atmosphere.",
+        "description":  "Improve layout rhythm and background atmosphere.",
         "acceptance_criteria":  [
-                                    "At least the hero, projects, and contact sections receive visibly improved layout composition",
-                                    "Background layers, spacing rhythm, and surface treatments create a more immersive page atmosphere",
-                                    "The page no longer reads as a plain stacked template from top to bottom"
+                                    "Page feels more editorial than S001."
                                 ],
         "verification_steps":  [
-                                   "Inspect section transitions and composition across the page",
-                                   "Confirm there are intentional depth or atmospheric treatments rather than flat single-color blocks",
-                                   "Confirm the layout remains coherent while becoming more visually distinctive"
+                                   "Inspect section flow and surfaces."
                                ],
-        "status":  "implemented",
-        "passes":  false,
+        "status":  "verified",
+        "passes":  true,
         "sprint_id":  "S002",
         "depends_on":  [
                            "TODO-007",
                            "TODO-008"
                        ],
-        "notes":  "Implemented in Sprint S002 visual redesign.",
-        "last_updated_at":  "2026-03-29T16:58:03+08:00",
-        "last_updated_by":  "generator"
+        "notes":  "Verified in S002.",
+        "last_updated_at":  "2026-03-29T17:09:44+08:00",
+        "last_updated_by":  "evaluator"
     },
     {
         "id":  "TODO-010",
-        "title":  "Introduce high-impact motion and interaction polish without scope creep",
+        "title":  "Add restrained motion polish",
         "category":  "quality",
         "priority":  "medium",
-        "description":  "Add restrained but meaningful motion, hover states, and reveal behaviors that reinforce the new art direction while keeping the page lightweight and accessible.",
+        "description":  "Introduce intentional motion without scope creep.",
         "acceptance_criteria":  [
-                                    "The page uses a few deliberate motion moments instead of scattered generic micro-interactions",
-                                    "Motion supports hierarchy and mood without blocking usability or navigation",
-                                    "Interactive states feel intentional and consistent with the chosen visual direction"
+                                    "Motion is present and restrained."
                                 ],
         "verification_steps":  [
-                                   "Confirm motion appears in high-impact moments such as initial reveals or section transitions",
-                                   "Confirm hover and focus states are visually intentional",
-                                   "Confirm reduced-complexity behavior remains usable on mobile and keyboard navigation"
+                                   "Inspect reveal and hover behavior."
                                ],
-        "status":  "implemented",
-        "passes":  false,
+        "status":  "verified",
+        "passes":  true,
         "sprint_id":  "S002",
         "depends_on":  [
                            "TODO-007",
                            "TODO-009"
                        ],
-        "notes":  "Implemented in Sprint S002 visual redesign.",
-        "last_updated_at":  "2026-03-29T16:58:03+08:00",
-        "last_updated_by":  "generator"
+        "notes":  "Verified in S002.",
+        "last_updated_at":  "2026-03-29T17:09:44+08:00",
+        "last_updated_by":  "evaluator"
     },
     {
         "id":  "TODO-011",
-        "title":  "Close obvious polish gaps and document the visual decisions",
+        "title":  "Close polish gaps and document decisions",
         "category":  "docs",
         "priority":  "medium",
-        "description":  "Address obvious polish gaps such as the missing favicon if feasible within the static setup and document the final art direction, design decisions, and remaining content limitations.",
+        "description":  "Close finish gaps and record visual decisions.",
         "acceptance_criteria":  [
-                                    "The page no longer emits an avoidable favicon 404 if this can be solved within current stack boundaries",
-                                    "Generator notes describe the chosen aesthetic direction, font decisions, palette logic, and signature visual motif",
-                                    "README or notes clearly separate finished polish work from remaining content placeholder work"
+                                    "Notes capture the design decisions."
                                 ],
         "verification_steps":  [
-                                   "Check whether favicon requests succeed or a reasoned exception is documented",
-                                   "Review generator notes for explicit visual decision rationale",
-                                   "Confirm remaining content gaps are still documented after the redesign"
+                                   "Inspect notes and runtime polish."
                                ],
-        "status":  "implemented",
-        "passes":  false,
+        "status":  "verified",
+        "passes":  true,
         "sprint_id":  "S002",
         "depends_on":  [
                            "TODO-007",
                            "TODO-009"
                        ],
-        "notes":  "Implemented in Sprint S002 visual redesign.",
-        "last_updated_at":  "2026-03-29T16:58:03+08:00",
+        "notes":  "Verified in S002.",
+        "last_updated_at":  "2026-03-29T17:09:44+08:00",
+        "last_updated_by":  "evaluator"
+    },
+    {
+        "id":  "TODO-012",
+        "title":  "Remove card-heavy section treatments",
+        "category":  "design",
+        "priority":  "high",
+        "description":  "Replace dominant card framing with integrated composition.",
+        "acceptance_criteria":  [
+                                    "Major sections no longer rely on card shells."
+                                ],
+        "verification_steps":  [
+                                   "Inspect about, projects, and contact layout."
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S003",
+        "depends_on":  [
+
+                       ],
+        "notes":  "Implemented in Sprint S003 by generator.",
+        "last_updated_at":  "2026-03-29T17:34:20.3240743+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-013",
+        "title":  "Rework the color palette",
+        "category":  "design",
+        "priority":  "high",
+        "description":  "Create a richer premium-artistic palette.",
+        "acceptance_criteria":  [
+                                    "Palette is materially improved over S002."
+                                ],
+        "verification_steps":  [
+                                   "Inspect updated color roles and contrast."
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S003",
+        "depends_on":  [
+
+                       ],
+        "notes":  "Implemented in Sprint S003 by generator.",
+        "last_updated_at":  "2026-03-29T17:34:20.3240743+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-014",
+        "title":  "Translate user interests into interaction motifs",
+        "category":  "feature",
+        "priority":  "high",
+        "description":  "Use computer science, AI agent, travel, and photography as interaction inspiration without feature creep.",
+        "acceptance_criteria":  [
+                                    "At least three interests are reflected in tasteful motifs."
+                                ],
+        "verification_steps":  [
+                                   "Inspect final interactions and generator notes."
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S003",
+        "depends_on":  [
+                           "TODO-012",
+                           "TODO-013"
+                       ],
+        "notes":  "Implemented in Sprint S003 by generator.",
+        "last_updated_at":  "2026-03-29T17:34:20.3240743+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-015",
+        "title":  "Strengthen motion choreography",
+        "category":  "quality",
+        "priority":  "medium",
+        "description":  "Align reveal, hover, and scroll behavior with the new composition.",
+        "acceptance_criteria":  [
+                                    "Motion supports composition rather than isolated cards."
+                                ],
+        "verification_steps":  [
+                                   "Inspect choreography and reduced-motion behavior."
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S003",
+        "depends_on":  [
+                           "TODO-012",
+                           "TODO-014"
+                       ],
+        "notes":  "Implemented in Sprint S003 by generator.",
+        "last_updated_at":  "2026-03-29T17:34:20.3240743+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-016",
+        "title":  "Document composition strategy",
+        "category":  "docs",
+        "priority":  "medium",
+        "description":  "Record composition, palette, and interaction decisions for evaluation.",
+        "acceptance_criteria":  [
+                                    "Notes capture composition and palette rationale."
+                                ],
+        "verification_steps":  [
+                                   "Inspect generator notes and run instructions."
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S003",
+        "depends_on":  [
+                           "TODO-013",
+                           "TODO-014"
+                       ],
+        "notes":  "Implemented in Sprint S003 by generator.",
+        "last_updated_at":  "2026-03-29T17:34:20.3240743+08:00",
         "last_updated_by":  "generator"
     }
 ]
