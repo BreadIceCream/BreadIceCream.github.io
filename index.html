@@ -56,25 +56,55 @@
             <li>Music rhythm & pacing</li>
             <li>Finance signal literacy</li>
           </ul>
+          <div class="command-console" data-command-console>
+            <p class="console-title">Agent Command</p>
+            <label class="console-row" for="agent-command-input">
+              <span class="console-prompt">/</span>
+              <input
+                id="agent-command-input"
+                data-command-input
+                type="text"
+                placeholder="travel | music | finance | agent | projects"
+                autocomplete="off"
+              />
+            </label>
+            <p class="command-stream" data-command-stream>
+              Awaiting command...
+            </p>
+            <div class="command-shortcuts">
+              <button type="button" data-command="/travel">/travel</button>
+              <button type="button" data-command="/music">/music</button>
+              <button type="button" data-command="/finance">/finance</button>
+              <button type="button" data-command="/agent">/agent</button>
+            </div>
+          </div>
         </div>
         <div class="hero-art" aria-hidden="true">
-          <p class="hero-note">
-            Notes / coherence over novelty. Signals should feel native to one
-            canvas.
-          </p>
-          <div class="agent-mesh" data-agent-mesh>
-            <div class="mesh-core"></div>
-            <div class="mesh-pulse"></div>
+          <div class="hero-field" data-agent-field>
+            <svg class="signal-wave" viewBox="0 0 560 130" preserveAspectRatio="none">
+              <path data-signal-path d=""></path>
+            </svg>
+            <svg class="travel-arcs" viewBox="0 0 560 130" preserveAspectRatio="none">
+              <path d="M8 102 C98 20, 188 116, 282 60 C356 16, 428 112, 552 46"></path>
+              <path d="M24 114 C132 48, 232 118, 336 70 C414 36, 468 100, 548 78"></path>
+            </svg>
+            <div class="agent-orb" data-agent-orb></div>
+            <div class="scan-beam" data-scan-beam></div>
+            <div class="field-points" data-field-points></div>
+            <div class="field-labels">
+              <span>Agent scan</span>
+              <span>Route trace</span>
+              <span>Signal cadence</span>
+            </div>
           </div>
-          <div class="market-strip" data-market-strip></div>
           <ol class="hero-ledger">
-            <li><span>01</span> Agent field routing</li>
-            <li><span>02</span> Route & coordinate traces</li>
-            <li><span>03</span> Exposure + rhythm + signal line</li>
+            <li><span>01</span> Autonomous cursor and scan behavior</li>
+            <li><span>02</span> Travel arcs and focus-linked reveal</li>
+            <li><span>03</span> Music-frequency + finance-curve pacing</li>
           </ol>
           <div class="hero-badge">
             <span>Edition</span>
-            <strong>04</strong>
+            <strong>05</strong>
           </div>
         </div>
       </section>
@@ -118,6 +148,9 @@
               A dashboard redesign focused on task clarity, data density, and
               keyboard-first interactions.
             </p>
+            <div class="location-thumb" data-location="Hong Kong">
+              <span>Hong Kong / Focus Lock</span>
+            </div>
             <a href="#contact">Request walkthrough</a>
           </article>
           <article class="project-entry" data-viewfinder>
@@ -127,6 +160,9 @@
               A modular campaign site with componentized sections and deliberate
               animation cadence.
             </p>
+            <div class="location-thumb" data-location="Tokyo">
+              <span>Tokyo / Exposure Sweep</span>
+            </div>
             <a href="#contact">Ask for details</a>
           </article>
           <article class="project-entry" data-viewfinder>
@@ -136,6 +172,9 @@
               Cross-team UI foundation: token hierarchy, primitives, and
               engineering handoff standards.
             </p>
+            <div class="location-thumb" data-location="Singapore">
+              <span>Singapore / Spatial Reveal</span>
+            </div>
             <a href="#contact">See implementation notes</a>
           </article>
         </div>

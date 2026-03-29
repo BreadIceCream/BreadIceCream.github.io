@@ -1,6 +1,6 @@
 # personal-homepage
 
-Sprint `S004` evolves the page into a single continuous atmospheric canvas. The hero seam is removed, residual panel language is converted into editorial annotations, and all five interests are mapped into coherent interaction language.
+Sprint `S005` removes the remaining hero panel residue and absorbs `dynamic_effects.md` into one coherent premium-artistic interaction language.
 
 ## Local Run
 
@@ -20,25 +20,23 @@ Optional quick check:
 npm run check
 ```
 
-## What Is Included In S004
+## What Is Included In S005
 
-- Continuous canvas composition:
-- Hero and page background now share one atmospheric field without detached cold blocks.
-- Panel-like residues are replaced by indices, annotation rails, route traces, and ledger marks.
+- Continuous hero canvas without detached panel feel in the PERSONAL EDITION area
+- AI-agent interaction language:
+- Autonomous light cursor
+- Hero scan beam and moving agent orb
+- Command-style navigation (`/travel`, `/music`, `/finance`, `/agent`) with streaming execution text
 
-- Updated premium palette roles:
-- Base: warm parchment paper
-- Ink: slate-charcoal text system
-- Cool accent: mist-teal interaction/light field
-- Warm accent: muted brass rhythm accents
-- Deep anchor: navy-green structural contrast
+- Travel + photography interaction language:
+- Route arcs and trajectory traces in the hero/experience flow
+- Focus-blur-reveal location thumbnails in project entries
+- Spatial reveal behavior tied to hover and viewport focus
 
-- Five-interest mapping:
-- AI Agent: interactive mesh with local reroute emphasis and pulse propagation
-- Travel: trajectory route line and coordinate trace language
-- Photography: viewfinder corner cues and shutter-flash focus behavior
-- Music: rhythm-based reveal cadence and notation bar pulse
-- Finance knowledge: abstract signal strip and trend ticks, without dashboard behavior
+- Music + finance interaction language:
+- Thin animated signal wave
+- Rhythm-notation pacing in section reveal
+- Finance-style curve mode for the signal line without dashboard UI
 
 - Preserved constraints:
 - Single-page information architecture remains intact

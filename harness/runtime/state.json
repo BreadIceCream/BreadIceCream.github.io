@@ -1,19 +1,19 @@
 ﻿{
     "project_id":  "personal-homepage",
-    "phase":  "implementation_done",
+    "phase":  "implementing",
     "status":  "active",
-    "active_sprint":  "S004",
-    "last_updated_at":  "2026-03-29T21:08:10.8785824+08:00",
+    "active_sprint":  "S005",
+    "last_updated_at":  "2026-03-29T21:38:10+08:00",
     "last_updated_by":  "generator",
     "current_scope":  [
-                          "TODO-017",
-                          "TODO-018",
-                          "TODO-019",
-                          "TODO-020",
-                          "TODO-021",
-                          "TODO-022"
+                          "TODO-023",
+                          "TODO-024",
+                          "TODO-025",
+                          "TODO-026",
+                          "TODO-027",
+                          "TODO-028"
                       ],
     "last_commit":  "d07ab9bc83cd25d687a74db908ace1b8a5729bd8",
-    "last_evaluation":  "PASS",
-    "resume_from":  "Evaluator should validate Sprint S004 continuous-canvas continuity, palette roles, and five-interest interaction mapping while preserving %SystemDrive% safety."
+    "last_evaluation":  "FAIL",
+    "resume_from":  "Generator is implementing S005: remove hero panel residue and absorb dynamic_effects.md into one coherent interaction system."
 }

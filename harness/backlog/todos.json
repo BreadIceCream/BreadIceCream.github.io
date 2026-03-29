@@ -505,8 +505,157 @@
                            "TODO-020",
                            "TODO-021"
                        ],
-        "notes":  "Implemented in Sprint S004 by generator.",
+        "notes":  "Implemented in Sprint S004 by generator, but the user manually rejected the result and skipped evaluator.",
         "last_updated_at":  "2026-03-29T21:08:10.8785824+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-023",
+        "title":  "Completely remove hero and PERSONAL EDITION panel feel",
+        "category":  "design",
+        "priority":  "high",
+        "description":  "Eliminate the remaining card or panel feel in the PERSONAL EDITION area and fully merge hero background, content, and support elements into one continuous atmospheric canvas.",
+        "acceptance_criteria":  [
+                                    "The PERSONAL EDITION area no longer reads as a separate cold or boxed region.",
+                                    "The hero and full-page background feel continuous from first viewport to lower sections."
+                                ],
+        "verification_steps":  [
+                                   "Inspect the first viewport for remaining panel silhouette or color seam.",
+                                   "Confirm the hero background transitions smoothly into the rest of the page."
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S005",
+        "depends_on":  [
+
+                       ],
+        "notes":  "Implemented in Sprint S005 with explicit dynamic_effects.md mapping.",
+        "last_updated_at":  "2026-03-29T21:49:08+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-024",
+        "title":  "Implement the AI Agent interaction layer from dynamic_effects.md",
+        "category":  "feature",
+        "priority":  "high",
+        "description":  "Strictly absorb the AI Agent direction from dynamic_effects.md: autonomous cursor, particle light point, scan sensation, and command-style navigation like /travel or /music with streaming task-execution feel.",
+        "acceptance_criteria":  [
+                                    "An autonomous cursor or particle-light interaction is visibly present and feels premium rather than gimmicky.",
+                                    "Command-style navigation or task-execution behavior is implemented in a restrained way that evokes an agent system."
+                                ],
+        "verification_steps":  [
+                                   "Inspect cursor and pointer interactions for scan or awareness behavior.",
+                                   "Trigger command-style navigation and confirm streaming or task-execution language is visible."
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S005",
+        "depends_on":  [
+                           "TODO-023"
+                       ],
+        "notes":  "Implemented in Sprint S005 with explicit dynamic_effects.md mapping.",
+        "last_updated_at":  "2026-03-29T21:49:08+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-025",
+        "title":  "Implement travel and photography dynamic language from dynamic_effects.md",
+        "category":  "feature",
+        "priority":  "high",
+        "description":  "Implement lens-focus style scrolling, route-line maps, arc paths, place markers, and location-photo behavior so travel and photography feel embedded in the page\u0027s motion language.",
+        "acceptance_criteria":  [
+                                    "Travel is represented through route traces, arcs, footprint-like lines, or map-linked motion.",
+                                    "Photography is represented through focus, lens, framing, exposure, or reveal language."
+                                ],
+        "verification_steps":  [
+                                   "Inspect about, experience, or visual sections for route and arc language.",
+                                   "Inspect project or hero visuals for focus, framing, or exposure-based interaction behavior."
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S005",
+        "depends_on":  [
+                           "TODO-023"
+                       ],
+        "notes":  "Implemented in Sprint S005 with explicit dynamic_effects.md mapping.",
+        "last_updated_at":  "2026-03-29T21:49:08+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-026",
+        "title":  "Implement music and finance dynamic language from dynamic_effects.md",
+        "category":  "feature",
+        "priority":  "high",
+        "description":  "Implement ultra-thin sine-wave or frequency motion, finance curve/signal switching, and compound-interest or ticker language while keeping it abstract, elegant, and non-dashboard-like.",
+        "acceptance_criteria":  [
+                                    "Music is represented through rhythm-response, frequency, or waveform motion rather than a player UI.",
+                                    "Finance knowledge is represented through signal, curve, formula, or market-geometry language without becoming a dashboard."
+                                ],
+        "verification_steps":  [
+                                   "Inspect title transitions, underline motion, or section rhythm for music response.",
+                                   "Inspect abstract signal lines, curve switching, or formula motifs for finance language."
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S005",
+        "depends_on":  [
+                           "TODO-023"
+                       ],
+        "notes":  "Implemented in Sprint S005 with explicit dynamic_effects.md mapping.",
+        "last_updated_at":  "2026-03-29T21:49:08+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-027",
+        "title":  "Unify all dynamic effects into one restrained premium-artistic system",
+        "category":  "quality",
+        "priority":  "high",
+        "description":  "Make the AI Agent, travel, photography, music, and finance interactions feel like one coherent motion language instead of a pile of disconnected effects or demo fragments.",
+        "acceptance_criteria":  [
+                                    "Dynamic effects share one timing, palette, and compositional logic.",
+                                    "The page remains advanced and artistic without collapsing into a feature demo."
+                                ],
+        "verification_steps":  [
+                                   "Inspect transitions across sections for coherence rather than effect stacking.",
+                                   "Confirm interactive motifs feel premium and restrained as a system."
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S005",
+        "depends_on":  [
+                           "TODO-024",
+                           "TODO-025",
+                           "TODO-026"
+                       ],
+        "notes":  "Implemented in Sprint S005 with explicit dynamic_effects.md mapping.",
+        "last_updated_at":  "2026-03-29T21:49:08+08:00",
+        "last_updated_by":  "generator"
+    },
+    {
+        "id":  "TODO-028",
+        "title":  "Document dynamic_effects compliance and user-override context",
+        "category":  "docs",
+        "priority":  "medium",
+        "description":  "Record how dynamic_effects.md was absorbed, how each of the five interests maps to interaction language, and that S004 was manually rejected by the user with evaluator intentionally skipped.",
+        "acceptance_criteria":  [
+                                    "Generator notes explicitly map all dynamic_effects directions to implemented behavior.",
+                                    "Sprint artifacts clearly state the S004 manual rejection and evaluator skip decision so future agents are not misled."
+                                ],
+        "verification_steps":  [
+                                   "Inspect generator notes and progress artifacts for dynamic_effects compliance mapping.",
+                                   "Inspect state or handoff text for explicit user-override documentation."
+                               ],
+        "status":  "implemented",
+        "passes":  false,
+        "sprint_id":  "S005",
+        "depends_on":  [
+                           "TODO-024",
+                           "TODO-025",
+                           "TODO-026",
+                           "TODO-027"
+                       ],
+        "notes":  "Implemented in Sprint S005 with explicit dynamic_effects.md mapping.",
+        "last_updated_at":  "2026-03-29T21:49:08+08:00",
         "last_updated_by":  "generator"
     }
 ]
