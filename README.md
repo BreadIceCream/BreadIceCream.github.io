@@ -1,6 +1,6 @@
 # personal-homepage
 
-Sprint `S003` evolves the S002 baseline into an integrated premium-artistic composition: less card-shell framing, stronger palette contrast, and tasteful interaction motifs tied to computer science, AI agents, travel, and photography.
+Sprint `S004` evolves the page into a single continuous atmospheric canvas. The hero seam is removed, residual panel language is converted into editorial annotations, and all five interests are mapped into coherent interaction language.
 
 ## Local Run
 
@@ -12,7 +12,7 @@ Commands:
 npm run dev
 ```
 
-The local server runs at:
+Local URL:
 - `http://localhost:4173`
 
 Optional quick check:
@@ -20,20 +20,32 @@ Optional quick check:
 npm run check
 ```
 
-## What Is Included In S003
+## What Is Included In S004
 
-- De-cardified layout direction: section content flows directly on the page with compositional separators instead of stacked card shells
-- Materially reworked palette: cool-ink accents + warm travel tones + luminous cyan interaction highlights
-- Interest-driven interaction motifs:
-  - AI Agent: network mesh in the hero that reacts to pointer focus
-  - Photography: viewfinder corner cues and subtle shutter-flash behavior on project focus
-  - Travel: animated route-line motif in experience section
-- Updated motion choreography that supports the whole page flow rather than isolated component animation
-- Preserved single-page navigation, accessibility basics, and static-friendly runtime
+- Continuous canvas composition:
+- Hero and page background now share one atmospheric field without detached cold blocks.
+- Panel-like residues are replaced by indices, annotation rails, route traces, and ledger marks.
+
+- Updated premium palette roles:
+- Base: warm parchment paper
+- Ink: slate-charcoal text system
+- Cool accent: mist-teal interaction/light field
+- Warm accent: muted brass rhythm accents
+- Deep anchor: navy-green structural contrast
+
+- Five-interest mapping:
+- AI Agent: interactive mesh with local reroute emphasis and pulse propagation
+- Travel: trajectory route line and coordinate trace language
+- Photography: viewfinder corner cues and shutter-flash focus behavior
+- Music: rhythm-based reveal cadence and notation bar pulse
+- Finance knowledge: abstract signal strip and trend ticks, without dashboard behavior
+
+- Preserved constraints:
+- Single-page information architecture remains intact
+- Static-friendly runtime and existing local commands remain valid
+- No backend/CMS/blog expansion
 
 ## Remaining Gaps (Expected)
 
-- Real profile copy and biography details
-- Real project screenshots, links, and outcomes
-- Real contact channels and social links
-- Final brand style preferences and any custom media assets
+- Personal copy, real project outcomes, and real links are still placeholders.
+- Brand-specific media and typography assets are still pending.
