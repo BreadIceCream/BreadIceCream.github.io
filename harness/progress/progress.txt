@@ -1,4 +1,4 @@
-Current phase: implementing
+Current phase: implementation_done
 Active sprint: S005
 Current scope: TODO-029, TODO-030, TODO-031, TODO-032, TODO-033
 
@@ -14,4 +14,7 @@ Open issues:
 - %SystemDrive%/ remains in workspace and must stay untouched
 
 Next recommended step:
-- Finalize generator_notes with commit hash, set phase to implementation_done, and hand off S005 for future evaluator verification
+- Evaluator should validate CHECK-509 through CHECK-515 for the same-sprint S005 follow-up pass.
+
+Implementation commit:
+- f96fe25ba20d8e076fcb769df7e7f5e6a2cd8f59

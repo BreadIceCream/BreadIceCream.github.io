@@ -1,9 +1,9 @@
 ﻿{
     "project_id":  "personal-homepage",
-    "phase":  "implementing",
+    "phase":  "implementation_done",
     "status":  "active",
     "active_sprint":  "S005",
-    "last_updated_at":  "2026-03-29T22:20:08+08:00",
+    "last_updated_at":  "2026-03-29T22:24:46+08:00",
     "last_updated_by":  "generator",
     "current_scope":  [
                           "TODO-029",
@@ -12,7 +12,7 @@
                           "TODO-032",
                           "TODO-033"
                       ],
-    "last_commit":  "e73e7ceb83297ec89a2304e93e19ce1928ef979f",
+    "last_commit":  "f96fe25423810747935ed8ce03679efdb8f7fe66",
     "last_evaluation":  "FAIL",
-    "resume_from":  "Generator implementing S005 follow-up: remove gray hover boxes, create unified interests section, enforce command allowlist, and tighten dynamic_effects compliance."
+    "resume_from":  "S005 follow-up implementation complete. Evaluator should validate CHECK-509 through CHECK-515 against the replanned contract."
 }
