@@ -1,0 +1,15 @@
+{
+  "hero": {
+    "name": "Beijia Huang",
+    "nickname": "Bread",
+    "title": "AI Agent Engineer & Independent Developer",
+    "intro": "Computer science student from Central South University. Focus on learning cutting-edge AI agent technology and multi-field knowledge."
+  },
+  "about": [
+    "I am a third-year undergraduate student majoring in Computer Science and Technology at Central South University. I have a strong interest and enthusiasm for AI agent technology. I am also very eager to learn knowledge in multiple fields to make myself more fulfilling, confident and calm.",
+    "My dream is to measure the world with my feet and appreciate the beautiful scenery everywhere in the world with my eyes."
+  ],
+  "footer": {
+    "name": "Bread"
+  }
+}

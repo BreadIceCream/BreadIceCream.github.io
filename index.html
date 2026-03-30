@@ -1,260 +1,172 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Homepage | Continuous Canvas Edition</title>
-    <meta
-      name="description"
-      content="A single-page personal homepage with continuous-canvas composition and premium interest-driven interaction language."
-    />
-    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header" id="home">
-      <div class="header-inner">
-        <a class="brand" href="#home">ZH / PERSONAL EDITION</a>
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="site-nav"
-        >
-          Menu
-        </button>
-        <nav id="site-nav" class="site-nav" aria-label="Primary">
-          <a href="#about">About</a>
-          <a href="#interests">Interests</a>
-          <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
-          <a href="#contact">Contact</a>
-        </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Homepage | Continuous Canvas Edition</title>
+  <meta name="description"
+    content="A single-page personal homepage with continuous-canvas composition and premium interest-driven interaction language." />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="home">
+    <div class="header-inner">
+      <a class="brand" href="#home">ZH / PERSONAL EDITION</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section reveal" aria-labelledby="hero-title">
+      <div class="section-index">00</div>
+      <div class="hero-copy">
+        <p class="eyebrow">FIELD NOTES / PERSONAL EDITION</p>
+        <h1 id="hero-title"></h1>
+        <p class="intro" id="hero-intro"></p>
+        <div class="command-console" data-command-console>
+          <p class="console-title">Agent Command</p>
+          <label class="console-row" for="agent-command-input">
+            <span class="console-prompt">/</span>
+            <input id="agent-command-input" data-command-input type="text"
+              placeholder="about projects experience interests contact" autocomplete="off" />
+          </label>
+          <p class="command-stream" data-command-stream>
+            Awaiting command...
+          </p>
+          <div class="command-shortcuts">
+            <button type="button" data-command="/travel">/travel</button>
+            <button type="button" data-command="/photography">/photography</button>
+            <button type="button" data-command="/music">/music</button>
+            <button type="button" data-command="/finance">/finance</button>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#interests">Explore Interests</a>
+          <a class="btn btn-secondary" href="#contact">Get In Touch</a>
+        </div>
       </div>
-    </header>
+      <div class="hero-art" aria-hidden="true">
+        <div class="pixel-stage">
+          <div class="pixel-sprite"></div>
+        </div>
+        <ul class="highlights" aria-label="Quick highlights">
+          <li>AI Agent / CS core</li>
+          <li>Travel route observation</li>
+          <li>Photography framing studies</li>
+          <li>Music</li>
+          <li>Finance signal literacy</li>
+        </ul>
+      </div>
+    </section>
 
-    <main id="main">
-      <section class="hero section reveal" aria-labelledby="hero-title">
-        <div class="section-index">00</div>
-        <div class="hero-copy">
-          <p class="eyebrow">FIELD NOTES / PERSONAL EDITION</p>
-          <h1 id="hero-title">你好，我是你的名字（待替换）</h1>
-          <p class="intro">
-            Computer science student focused on AI-agent orchestration, digital
-            storytelling, and premium interaction craft. Placeholder text should
-            be replaced with your own narrative.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#interests">Explore Interests</a>
-            <a class="btn btn-secondary" href="#contact">Get In Touch</a>
-          </div>
-          <ul class="highlights" aria-label="Quick highlights">
-            <li>AI Agent workflows / CS core</li>
-            <li>Travel route observation</li>
-            <li>Photography framing studies</li>
-            <li>Music rhythm & pacing</li>
-            <li>Finance signal literacy</li>
-          </ul>
-          <div class="command-console" data-command-console>
-            <p class="console-title">Agent Command</p>
-            <label class="console-row" for="agent-command-input">
-              <span class="console-prompt">/</span>
-              <input
-                id="agent-command-input"
-                data-command-input
-                type="text"
-                placeholder="/agent /interests /travel /music /finance /projects /about /experience /contact"
-                autocomplete="off"
-              />
-            </label>
-            <p class="command-stream" data-command-stream>
-              Awaiting command...
-            </p>
-            <div class="command-shortcuts">
-              <button type="button" data-command="/interests">/interests</button>
-              <button type="button" data-command="/travel">/travel</button>
-              <button type="button" data-command="/music">/music</button>
-              <button type="button" data-command="/finance">/finance</button>
-              <button type="button" data-command="/agent">/agent</button>
-            </div>
-          </div>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="hero-field" data-agent-field>
-            <svg class="signal-wave" viewBox="0 0 560 130" preserveAspectRatio="none">
-              <path data-signal-path d=""></path>
-            </svg>
-            <svg class="travel-arcs" viewBox="0 0 560 130" preserveAspectRatio="none">
-              <path d="M8 102 C98 20, 188 116, 282 60 C356 16, 428 112, 552 46"></path>
-              <path d="M24 114 C132 48, 232 118, 336 70 C414 36, 468 100, 548 78"></path>
-            </svg>
-            <div class="agent-orb" data-agent-orb></div>
-            <div class="scan-beam" data-scan-beam></div>
-            <div class="field-points" data-field-points></div>
-            <div class="field-labels">
-              <span>Agent scan</span>
-              <span>Route trace</span>
-              <span>Signal cadence</span>
-            </div>
-          </div>
-          <ol class="hero-ledger">
-            <li><span>01</span> Autonomous cursor and scan behavior</li>
-            <li><span>02</span> Travel arcs and focus-linked reveal</li>
-            <li><span>03</span> Music-frequency + finance-curve pacing</li>
-          </ol>
-          <div class="hero-badge">
-            <span>Edition</span>
-            <strong>05</strong>
-          </div>
-        </div>
-      </section>
+    <section id="about" class="section reveal">
+      <div class="section-index">01</div>
+      <div class="section-heading">
+        <p class="eyebrow">Background</p>
+        <h2>About</h2>
+      </div>
+      <div class="flow-copy" id="about-container"></div>
+    </section>
 
-      <section id="about" class="section reveal">
-        <div class="section-index">01</div>
-        <div class="section-heading">
-          <p class="eyebrow">Background</p>
-          <h2>About</h2>
-        </div>
-        <div class="flow-copy">
-          <p>
-            I build web experiences with technical rigor and editorial
-            sensitivity. The objective is clarity, atmosphere, and execution
-            quality, not decorative noise.
-          </p>
-          <p>
-            Replace this placeholder with your real background, project
-            priorities, and long-term direction.
-          </p>
-        </div>
-      </section>
+    <section id="interests" class="section reveal">
+      <div class="section-index">02</div>
+      <div class="section-heading">
+        <p class="eyebrow">Unified Interests</p>
+        <h2>Interests</h2>
+        <p>
+          Click or hover over each card to explore more.
+        </p>
+      </div>
+      <div class="interests-grid" data-interests-grid>
+        <article class="interest-node" data-interest-node="travel">
+          <h3>Travel</h3>
+          <p>Route traces, arcs, and location-linked transitions.</p>
+        </article>
+        <article class="interest-node" data-interest-node="photography">
+          <h3>Photography</h3>
+          <p>Lens focus, blur-to-reveal, and framing logic.</p>
+        </article>
+        <article class="interest-node" data-interest-node="music">
+          <h3>Music</h3>
+          <p>Frequency pacing and rhythm-aware motion timing.</p>
+        </article>
+        <article class="interest-node" data-interest-node="finance">
+          <h3>Finance</h3>
+          <p>Signal curves and compound-growth inspired transitions.</p>
+        </article>
+      </div>
+    </section>
 
-      <section id="interests" class="section reveal">
-        <div class="section-index">02</div>
-        <div class="section-heading">
-          <p class="eyebrow">Unified Interests</p>
-          <h2>Travel · Photography · Music · Finance</h2>
-          <p>
-            One independent section for all interest dynamics, fully decoupled
-            from About / Projects / Experience.
-          </p>
-        </div>
-        <div class="interests-grid" data-interests-grid>
-          <article class="interest-node active" data-interest-node="travel">
-            <h3>Travel</h3>
-            <p>Route traces, arcs, and location-linked transitions.</p>
-          </article>
-          <article class="interest-node" data-interest-node="photography">
-            <h3>Photography</h3>
-            <p>Lens focus, blur-to-reveal, and framing logic.</p>
-          </article>
-          <article class="interest-node" data-interest-node="music">
-            <h3>Music</h3>
-            <p>Frequency pacing and rhythm-aware motion timing.</p>
-          </article>
-          <article class="interest-node" data-interest-node="finance">
-            <h3>Finance</h3>
-            <p>Signal curves and compound-growth inspired transitions.</p>
-          </article>
-        </div>
-        <div class="interests-canvas" data-interests-canvas aria-hidden="true">
-          <svg class="interest-route" viewBox="0 0 640 180" preserveAspectRatio="none">
-            <path data-interest-route d="M14 130 C124 38, 220 170, 334 86 C426 24, 540 164, 626 62"></path>
-          </svg>
-          <svg class="interest-signal" viewBox="0 0 640 180" preserveAspectRatio="none">
-            <path data-interest-signal d=""></path>
-          </svg>
-          <div class="focus-lens" data-focus-lens></div>
-          <div class="city-track">
-            <button type="button" data-city="Changsha">Changsha</button>
-            <button type="button" data-city="Hong Kong">Hong Kong</button>
-            <button type="button" data-city="Tokyo">Tokyo</button>
-            <button type="button" data-city="Singapore">Singapore</button>
-          </div>
-          <p class="interest-status" data-interest-status>
-            mode://travel -> route tracing online
-          </p>
-          <p class="compound-formula">A = P · (1 + r)^t</p>
-        </div>
-      </section>
+    <section id="projects" class="section reveal">
+      <div class="section-index">03</div>
+      <div class="section-heading">
+        <p class="eyebrow">Featured</p>
+        <h2>Projects</h2>
+      </div>
+      <div class="project-axis" aria-hidden="true"></div>
+      <div class="project-stream" id="projects-container"></div>
+    </section>
 
-      <section id="projects" class="section reveal">
-        <div class="section-index">03</div>
-        <div class="section-heading">
-          <p class="eyebrow">Featured</p>
-          <h2>Projects</h2>
-          <p>Replace each placeholder with real case studies and outcomes.</p>
-        </div>
-        <div class="project-axis" aria-hidden="true"></div>
-        <div class="project-stream">
-          <article class="project-entry" data-viewfinder>
-            <p class="entry-tag">01 / Product UX</p>
-            <h3>Project Alpha (Placeholder)</h3>
-            <p>
-              A dashboard redesign focused on task clarity, data density, and
-              keyboard-first interactions.
-            </p>
-            <a href="#contact">Request walkthrough</a>
-          </article>
-          <article class="project-entry" data-viewfinder>
-            <p class="entry-tag">02 / Marketing Build</p>
-            <h3>Project Beta (Placeholder)</h3>
-            <p>
-              A modular campaign site with componentized sections and deliberate
-              animation cadence.
-            </p>
-            <a href="#contact">Ask for details</a>
-          </article>
-          <article class="project-entry" data-viewfinder>
-            <p class="entry-tag">03 / Design System</p>
-            <h3>Project Gamma (Placeholder)</h3>
-            <p>
-              Cross-team UI foundation: token hierarchy, primitives, and
-              engineering handoff standards.
-            </p>
-            <a href="#contact">See implementation notes</a>
-          </article>
-        </div>
-      </section>
+    <section id="experience" class="section reveal">
+      <div class="section-index">04</div>
+      <div class="section-heading">
+        <p class="eyebrow">Trajectory</p>
+        <h2>Experience</h2>
+      </div>
+      <ol class="timeline" id="experience-container"></ol>
+    </section>
 
-      <section id="experience" class="section reveal">
-        <div class="section-index">04</div>
-        <div class="section-heading">
-          <p class="eyebrow">Trajectory</p>
-          <h2>Experience</h2>
-        </div>
-        <ol class="timeline">
-          <li>
-            <h3>Senior Frontend Engineer · Placeholder Co.</h3>
-            <p>2024 - Present · Led page architecture and design-system alignment.</p>
-          </li>
-          <li>
-            <h3>Frontend Developer · Placeholder Studio</h3>
-            <p>2022 - 2024 · Built responsive web experiences for product teams.</p>
-          </li>
-        </ol>
-      </section>
+    <section id="contact" class="section reveal">
+      <div class="section-index">05</div>
+      <div class="section-heading">
+        <p class="eyebrow">Connection</p>
+        <h2>Contact</h2>
+      </div>
+      <p id="contact-desc"></p>
+      <div class="contact-actions" id="contact-container"></div>
+    </section>
+  </main>
 
-      <section id="contact" class="section reveal">
-        <div class="section-index">05</div>
-        <div class="section-heading">
-          <p class="eyebrow">Connection</p>
-          <h2>Contact</h2>
-        </div>
-        <p>Replace the links below with your real channels.</p>
-        <div class="contact-actions">
-          <a class="btn btn-primary" href="mailto:your-email@example.com">Email Me</a>
-          <a class="btn btn-secondary" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="btn btn-secondary" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-        </div>
-      </section>
-    </main>
+  <!-- 兴趣浮层 -->
+  <div class="interest-overlay" id="interest-overlay">
+    <div class="interest-panel" id="panel-travel">
+      <canvas class="travel-globe" width="600" height="600"></canvas>
+    </div>
+    <div class="interest-panel" id="panel-photography">
+      <div class="gallery-container">
+          <div class="scroll-gallery" id="scroll-photography"></div>
+      </div>
+    </div>
+    <div class="interest-panel" id="panel-music">
+      <div class="lyrics-stage"></div>
+    </div>
+    <div class="interest-panel" id="panel-finance">
+      <canvas class="kline-canvas" width="800" height="400"></canvas>
+    </div>
+  </div>
 
-    <footer class="site-footer">
-      <p>© <span id="year"></span> Your Name (Placeholder). All rights reserved.</p>
-    </footer>
+  <footer class="site-footer">
+    <p>© <span id="year"></span> <span id="footer-name"></span>. All rights reserved.</p>
+  </footer>
 
-    <script src="./main.js"></script>
-  </body>
+  <script src="https://unpkg.com/d3@7.8.5/dist/d3.min.js"></script>
+  <script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+  <script src="https://unpkg.com/exifr/dist/lite.umd.js"></script>
+  <script src="./main.js"></script>
+</body>
+
 </html>

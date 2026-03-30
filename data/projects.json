@@ -1,0 +1,18 @@
+{
+  "projects": [
+    {
+      "tag": "2025.11 - 2025.12 / Full-Stack AI",
+      "title": "AI Traveler: Intelligent Travel Planning Platform",
+      "description": "Full-stack desktop application built with SpringBoot3, Spring AI, Electron, and React 18. Integrates LLM reasoning, PGVector retrieval, and multi-thread crawlers to provide an end-to-end AI service architecture from inspiration discovery to collaborative editing.",
+      "linkHref": "https://github.com/BreadIceCream/ai-traveler-frontend",
+      "linkText": "View Frontend Source (GitHub)"
+    },
+    {
+      "tag": "2025.09 - 2026.03 / Agentic RAG",
+      "title": "Simple RAG: Personal Knowledge Base System",
+      "description": "Full-stack knowledge base based on LangGraph and FastAPI with an Agentic architecture. Employs hybrid recall and Small-to-Big hierarchical chunk retrieval strategies, supports RAGAS offline evaluation, and combined with Vue 3 for SSE streaming Q&A and visual knowledge management.",
+      "linkHref": "https://github.com/BreadIceCream/simple-rag-frontend",
+      "linkText": "View Frontend Source (GitHub)"
+    }
+  ]
+}

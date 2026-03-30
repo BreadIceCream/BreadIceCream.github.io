@@ -1,0 +1,22 @@
+{
+  "experience": [
+    {
+      "role": "Java Development Intern",
+      "company": "Shenzhen Kingdom Sci-Tech Co., Ltd",
+      "period": "2026.01 - 2026.02",
+      "description": "During the internship, I mainly participated in BUG repair of business modules and solved problems such as missing OceanBase/Oracle database scripts and abnormal interface mapping. At the same time, I sorted out the core business processes and output flow charts, sequence diagrams and interface analysis documents to support subsequent development and maintenance."
+    },
+    {
+      "role": "Photographer, Recorder",
+      "company": "Laoche Village",
+      "period": "2025.05 - 2025.06",
+      "description": "This practice focuses on the protection of Tujia intangible cultural heritage in Laoche Village and the integration of cultural tourism. Through questionnaire surveys, research and promotion of Tujia intangible cultural heritage, it helps rural revitalization. In this practice, I am mainly responsible for photographing records, making vlog videos, and publishing posts." 
+    },
+    {
+      "role": "Undergraduate Student",
+      "company": "Central South University",
+      "period": "2023 - Present",
+      "description": "Major in Computer Science and Technology, Central South University. Ranked in the top 30% of this major, the major courses include data structure, algorithm analysis and design, machine learning, software engineering, and computer network."
+    }
+  ]
+}

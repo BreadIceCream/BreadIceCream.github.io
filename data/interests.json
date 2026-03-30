@@ -1,0 +1,105 @@
+{
+  "travel": {
+    "cities": [
+      { "name": "Changsha", "lng": 112.9388, "lat": 28.2282, "time": "2023.08" },
+      { "name": "Guangzhou", "lng": 113.2644, "lat": 23.1291, "time": "2024.01" },
+      { "name": "Nanjing", "lng": 118.7967, "lat": 32.0584, "time": "2024.05" },
+      { "name": "Nanning", "lng": 108.3200, "lat": 22.8200, "time": "2024.07" },
+      { "name": "Dali", "lng": 100.2833, "lat": 25.6000, "time": "2024.07" },
+      { "name": "Kunming", "lng": 102.7123, "lat": 25.0404, "time": "2024.08" },
+      { "name": "Taian", "lng": 117.1333, "lat": 36.1667, "time": "2024.10" },
+      { "name": "Jinan", "lng": 117.0007, "lat": 36.6761, "time": "2024.10" },
+      { "name": "Huangshan", "lng": 118.1000, "lat": 30.1000, "time": "2025.05" },
+      { "name": "Wuyuan", "lng": 117.6833, "lat": 29.6833, "time": "2025.05" }
+    ]
+  },
+  "photography": {
+    "photos": [
+      { "src": "./data/photos/photo1.jpg", "location": "Concert of my favorite singer David Tao", "scale": 1.2 },
+      { "src": "./data/photos/photo2.jpg", "location": "Silhouette beside Yongjiang River in Nanning", "scale": 0.8 },
+      { "src": "./data/photos/photo3.jpg", "location": "Orange isle, Mao Zedong Youth Art Sculpture", "scale": 0.9 },
+      { "src": "./data/photos/photo4.jpg", "location": "Guangzhou, Sun Yat-sen Memorial Hall", "scale": 0.9 },
+      { "src": "./data/photos/photo5.jpg", "location": "Nanjing, Sun Yat-sen Mausoleum Music Stage", "scale": 1.0 },
+      { "src": "./data/photos/photo6.jpg", "location": "Dali, Erhai Ecological Corridor", "scale": 1.1 },
+      { "src": "./data/photos/photo7.jpg", "location": "Dusk line on Mount Tai", "scale": 1.0 },
+      { "src": "./data/photos/photo8.jpg", "location": "Daming Lakeside, Jinan", "scale": 1.0 },
+      { "src": "./data/photos/photo9.jpg", "location": "Bamianshan, west Hunan", "scale": 0.8 },
+      { "src": "./data/photos/photo10.jpg", "location": "Flower", "scale": 0.9 },
+      { "src": "./data/photos/photo11.jpg", "location": "Hongcun, Anhui", "scale":  1.0},
+      { "src": "./data/photos/photo12.jpg", "location": "Huangshan", "scale":  0.7},
+      { "src": "./data/photos/photo13.jpg", "location": "Guest-Greeting Pine, Huangshan", "scale":  0.8},
+      { "src": "./data/photos/photo14.jpg", "location": "Huangling in Jiangxi", "scale":  0.8}
+    ]
+  },
+  "music": {
+    "songs": [
+      {
+        "title": "流沙 — 陶喆",
+        "lyrics": [
+          "爱情好像流沙 我不挣扎",
+          "随它去吧 我不害怕",
+          "爱情好像流沙 明知该躲它",
+          "不愿放下 oh, baby 让我这样吧"
+        ]
+      },
+      {
+        "title": "Angel - 陶喆",
+        "lyrics": [
+          "像条船在海上漂",
+          "北斗星也看不到",
+          "谁能够扬起了帆",
+          "远远离开这黑潮"
+        ]
+      },
+      {
+        "title": "流泪手心 - 王力宏",
+        "lyrics": [
+          "当你将离别握在我手心",
+          "我听见爱被悄悄捏碎的声音",
+          "你不懂你不要的我的心",
+          "会随你松开的手而喊停"
+        ]
+      },
+      {
+        "title": "心中的日月 - 王力宏",
+        "lyrics": [
+          "我的心寻找家我的家没有花",
+          "我的花却在这山谷等着我",
+          "若一开始没有上帝暗中偷偷的怂恿",
+          "我们怎知选择相逢"
+        ]
+      },
+      {
+        "title": "真实 - 张惠妹",
+        "lyrics": [
+          "记忆 在我的心中翻滚",
+          "是不是每一个人",
+          "都像我一样笨"
+        ]
+      },
+      {
+        "title": "情话 - 丁世光",
+        "lyrics": [
+          "船也开走了",
+          "海燕也飞走了",
+          "我们却还在原地 等待",
+          "一个人等待能算是爱",
+          "一生要多长才够等待"
+        ]
+      },
+      {
+        "title": "It Wasn't Meant To Be - 林忆莲",
+        "lyrics": [
+          "与你分离",
+          "说好那天不下雨",
+          "我心都快碎了",
+          "怎么 忍住哭泣",
+          "It wasn't meant to be",
+          "事到如今 我只能安慰自己",
+          "It wasn't meant to be",
+          "事到如今只能说 我们无能为力"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的像素生活动效</title>
+    <style>
+        /* 1. 基础样式 */
+        body {
+            background-color: #1a1a1a;
+            /* 深色背景更显高级 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+            /* 像素风格字体 */
+        }
+
+        /* 2. 动画容器 */
+        .character-stage {
+            /* 根据你的雪碧图单个帧的大小设置 */
+            width: 320px;
+            /* 假设单个像素画面的宽度 */
+            height: 180px;
+            /* 假设单个像素画面的高度 */
+            border: 4px solid #333;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            /* 隐藏显示区域外的帧 */
+            image-rendering: pixelated;
+            /* 关键：保持像素清晰，不模糊 */
+        }
+
+        /* 3. 雪碧图主体 */
+        .sprite {
+            width: 100%;
+            height: 100%;
+            /* 指向你保存的雪碧图文件 */
+            background-image: url('pixel-life-sprite.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* 如果雪碧图比例正确，用cover */
+
+            /* 定义动画：名称 时间 速度曲线(steps实现像素跳跃) 循环 */
+            animation: pixelLifeLoop 11s steps(1) infinite;
+        }
+
+        /* 4. 定义动画关键帧 */
+        /* 我们有4个主要状态，每个状态停留不同的时间。
+           总时间是 3+2+3+3 = 11秒。
+           你需要根据你最终合成的雪碧图排列方式（水平或垂直）来调整 background-position。
+           这里假设你的雪碧图是水平排列的 4 帧。*/
+
+        @keyframes pixelLifeLoop {
+
+            /* 状态 1: 写代码 (停留 3s, 占总时间 0% - 27%) */
+            0%,
+            27% {
+                background-position: 0 0;
+                /* 显示第1帧 */
+            }
+
+            /* 状态 2: 唱歌 (停留 2s, 占总时间 27% - 45%) */
+            27.1%,
+            45% {
+                background-position: -320px 0;
+                /* 显示第2帧，向左移动一个帧宽 */
+            }
+
+            /* 状态 3: 看金融书 (停留 3s, 占总时间 45% - 72%) */
+            45.1%,
+            72% {
+                background-position: -640px 0;
+                /* 显示第3帧 */
+            }
+
+            /* 状态 4: 幻想旅游 (停留 3s, 占总时间 72% - 100%) */
+            72.1%,
+            100% {
+                background-position: -960px 0;
+                /* 显示第4帧 */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="character-stage">
+        <div class="sprite"></div>
+    </div>
+
+    <script>
+        // 如果你需要用JS精确控制，可以动态修改 CSS animation 属性
+        // 或者给 .sprite 添加/移除不同的 className
+    </script>
+</body>
+
+</html>

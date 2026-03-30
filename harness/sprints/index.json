@@ -2,18 +2,56 @@
   {
     "sprint_id": "S001",
     "title": "First runnable personal homepage",
-    "status": "implemented_pending_evaluation",
+    "status": "passed",
     "goal": "Move the repository from empty state to a runnable single-page personal homepage foundation.",
     "created_by": "planner",
     "created_at": "2026-03-29T15:05:00+08:00",
+    "closed_at": "2026-03-29T15:29:09+08:00",
     "path": "harness/sprints/S001",
-    "scope_todo_ids": [
-      "TODO-001",
-      "TODO-002",
-      "TODO-003",
-      "TODO-004",
-      "TODO-005",
-      "TODO-006"
-    ]
+    "scope_todo_ids": ["TODO-001", "TODO-002", "TODO-003", "TODO-004", "TODO-005", "TODO-006"]
+  },
+  {
+    "sprint_id": "S002",
+    "title": "Elevated visual identity refresh",
+    "status": "passed",
+    "goal": "Transform the current homepage from competent but plain into a visually distinctive single-page experience with stronger luxury-editorial atmosphere, artistic composition, and premium polish.",
+    "created_by": "planner",
+    "created_at": "2026-03-29T16:46:21.6522759+08:00",
+    "closed_at": "2026-03-29T17:09:44.5474330+08:00",
+    "path": "harness/sprints/S002",
+    "scope_todo_ids": ["TODO-007", "TODO-008", "TODO-009", "TODO-010", "TODO-011"]
+  },
+  {
+    "sprint_id": "S003",
+    "title": "Integrated composition and interest-driven interaction refresh",
+    "status": "passed",
+    "goal": "Evolve the homepage beyond card-based presentation into a more integrated premium-artistic composition with a stronger palette and tasteful interactions inspired by computer science, AI agents, travel, and photography.",
+    "created_by": "planner",
+    "created_at": "2026-03-29T17:20:00+08:00",
+    "closed_at": "2026-03-29T17:51:50.5672061+08:00",
+    "path": "harness/sprints/S003",
+    "scope_todo_ids": ["TODO-012", "TODO-013", "TODO-014", "TODO-015", "TODO-016"]
+  },
+  {
+    "sprint_id": "S004",
+    "title": "Continuous canvas and themed interaction refinement",
+    "status": "failed",
+    "goal": "Unify the homepage into one continuous atmospheric canvas, repair the hero color seam, and evolve all five interests into cohesive high-end interaction languages while preserving the premium-artistic tone.",
+    "created_by": "planner",
+    "created_at": "2026-03-29T21:05:00+08:00",
+    "closed_at": "2026-03-29T21:20:00+08:00",
+    "path": "harness/sprints/S004",
+    "scope_todo_ids": ["TODO-017", "TODO-018", "TODO-019", "TODO-020", "TODO-021", "TODO-022"]
+  },
+  {
+    "sprint_id": "S005",
+    "title": "S005 same-sprint replan for unified interests and stricter dynamics",
+    "status": "active",
+    "goal": "Resolve the latest manual review findings inside S005 by removing hover gray boxes, consolidating interests into one independent section, allowlisting command navigation, and enforcing stricter dynamic_effects.md compliance.",
+    "created_by": "planner",
+    "created_at": "2026-03-29T21:20:00+08:00",
+    "closed_at": null,
+    "path": "harness/sprints/S005",
+    "scope_todo_ids": ["TODO-029", "TODO-030", "TODO-031", "TODO-032", "TODO-033"]
   }
 ]

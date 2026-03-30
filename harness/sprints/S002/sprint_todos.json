@@ -12,27 +12,27 @@
                   {
                       "id":  "TODO-007",
                       "title":  "Define a bold visual direction and premium design system for the homepage",
-                      "status":  "implemented"
+                      "status":  "verified"
                   },
                   {
                       "id":  "TODO-008",
                       "title":  "Redesign the hero into a memorable visual centerpiece",
-                      "status":  "implemented"
+                      "status":  "verified"
                   },
                   {
                       "id":  "TODO-009",
                       "title":  "Upgrade section layouts with editorial rhythm, depth, and atmosphere",
-                      "status":  "implemented"
+                      "status":  "verified"
                   },
                   {
                       "id":  "TODO-010",
                       "title":  "Introduce high-impact motion and interaction polish without scope creep",
-                      "status":  "implemented"
+                      "status":  "verified"
                   },
                   {
                       "id":  "TODO-011",
                       "title":  "Close obvious polish gaps and document the visual decisions",
-                      "status":  "implemented"
+                      "status":  "verified"
                   }
               ]
 }
