@@ -13,7 +13,7 @@ npm run dev
 ```
 
 Local URL:
-- `http://localhost:4173`
+- `http://localhost:5173`
 
 Optional quick check:
 ```bash
