@@ -24,11 +24,7 @@
       { "src": "./data/photos/photo7.jpg", "location": "Dusk line on Mount Tai", "scale": 1.0 },
       { "src": "./data/photos/photo8.jpg", "location": "Daming Lakeside, Jinan", "scale": 1.0 },
       { "src": "./data/photos/photo9.jpg", "location": "Bamianshan, west Hunan", "scale": 0.8 },
-      { "src": "./data/photos/photo10.jpg", "location": "Flower", "scale": 0.9 },
-      { "src": "./data/photos/photo11.jpg", "location": "Hongcun, Anhui", "scale":  1.0},
-      { "src": "./data/photos/photo12.jpg", "location": "Huangshan", "scale":  0.7},
-      { "src": "./data/photos/photo13.jpg", "location": "Guest-Greeting Pine, Huangshan", "scale":  0.8},
-      { "src": "./data/photos/photo14.jpg", "location": "Huangling in Jiangxi", "scale":  0.8}
+      { "src": "./data/photos/photo10.jpg", "location": "Flower", "scale": 0.9 }
     ]
   },
   "music": {
