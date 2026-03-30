@@ -943,6 +943,113 @@ body.shutter-flash::after {
   }
 }
 
+/* ─── Friends Grid ─── */
+.friends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-md);
+}
+
+.friend-card {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  background: rgba(250, 247, 240, 0.4);
+  border: 1px solid var(--line-soft);
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.friend-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(123, 198, 186, 0.05), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.friend-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--mist-strong);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 12px 30px rgba(35, 57, 66, 0.08);
+}
+
+.friend-card:hover::before {
+  opacity: 1;
+}
+
+.friend-avatar {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%; /* 圆形 */
+  background: var(--deep-anchor);
+  color: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: "Consolas", monospace;
+  font-size: 1.15rem;
+  box-shadow: 0 4px 12px rgba(35, 57, 66, 0.12);
+  overflow: hidden; /* 防止图片溢出 */
+}
+
+.friend-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top; /* 截取原图顶部区域 */
+  display: block;
+}
+
+.friend-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xs);
+}
+
+.friend-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--deep-anchor);
+  transition: color 0.3s ease;
+}
+
+.friend-card:hover h3 {
+  color: var(--mist-strong);
+}
+
+.friend-info p {
+  margin: 0.3rem 0 0;
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.friend-link-icon {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  width: 14px;
+  height: 14px;
+  opacity: 0.2;
+  transition: all 0.3s ease;
+}
+
+.friend-card:hover .friend-link-icon {
+  opacity: 0.7;
+  transform: translate(2px, -2px);
+}
+
 @media (max-width: 940px) {
   .hero {
     grid-template-columns: 1fr;

@@ -133,7 +133,7 @@ function setupAutonomousCursor() {
 }
 
 function setupTextScan() {
-  textScanTargets = Array.from(document.querySelectorAll("h1, h2, h3, p, .highlights li, .btn, .site-nav a, [data-viewfinder]"));
+  textScanTargets = Array.from(document.querySelectorAll("h1, h2, h3, p, .highlights li, .btn, .site-nav a, .friend-card, [data-viewfinder]"));
   textScanTargets.forEach((target) => {
     target.addEventListener("pointerenter", () => {
       target.classList.remove("scan-active");
@@ -174,7 +174,8 @@ const COMMAND_ALLOWLIST = {
   "/finance": { selector: "#interests", mode: "finance", label: "compound curve mode" },
   "/projects": { selector: "#projects", mode: null, label: "project stream selected" },
   "/experience": { selector: "#experience", mode: null, label: "experience route selected" },
-  "/contact": { selector: "#contact", mode: null, label: "contact endpoint selected" }
+  "/contact": { selector: "#contact", mode: null, label: "contact endpoint selected" },
+  "/friends": { selector: "#friends", mode: null, label: "inner circle endpoint selected" }
 };
 
 function executeCommand(raw) {
@@ -975,12 +976,52 @@ async function loadContactData() {
   }
 }
 
+async function loadFriendsData() {
+  try {
+    const res = await fetch("./data/friends.json");
+    const data = await res.json();
+    const container = document.getElementById("friends-container");
+    if (!container) return;
+
+    data.friends.forEach(friend => {
+      const a = document.createElement("a");
+      a.className = "friend-card";
+      a.href = friend.link;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.setAttribute("data-viewfinder", "");
+
+      const isImg = friend.avatar && (friend.avatar.startsWith('http') || friend.avatar.startsWith('./') || friend.avatar.includes('/') || /\.(jpg|jpeg|png|webp|gif|svg)$/i.test(friend.avatar));
+      const avatarContent = isImg 
+        ? `<img src="${friend.avatar}" alt="${friend.name}" class="friend-avatar-img">` 
+        : `<span>${friend.avatar || friend.name[0]}</span>`;
+
+      a.innerHTML = `
+        <div class="friend-header">
+          <div class="friend-avatar">${avatarContent}</div>
+          <h3>${friend.name}</h3>
+        </div>
+        <div class="friend-info">
+          <p>${friend.description}</p>
+        </div>
+        <svg class="friend-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 17L17 7M17 7H7M17 7V17"/>
+        </svg>
+      `;
+      container.appendChild(a);
+    });
+  } catch (e) {
+    console.warn("Error loading friends:", e);
+  }
+}
+
 async function initSite() {
   await Promise.all([
     loadProfileData(),
     loadProjectsData(),
     loadExperienceData(),
-    loadContactData()
+    loadContactData(),
+    loadFriendsData()
   ]);
 
   // DOM content is now populated, initialize all interactions

@@ -1,0 +1,16 @@
+{
+  "friends": [
+    {
+      "name": "Xinyu Fu",
+      "description": "Researching EEG Foundation Models and PEFT under Prof. Quanying Liu. Focused on AI4Neuroscience and Brain-inspired AI. Actively seeking 2026 summer internships and 2027 Ph.D. positions. Feel free to email for collaboration!",
+      "link": "https://xinyu-fu.com",
+      "avatar": "https://xinyu-fu.com/images/myself.jpg"
+    },
+    {
+      "name": "Haojun Tang",
+      "description": "Undergraduate in Remote Sensing Science and Technology at Central South University (2023–Now). Specializing in 3D Vision, Photogrammetry, and Multi-modal Remote Sensing. Passionate about bridging UAV Embedded Systems with 3D Reconstruction to sense the world in higher dimensions.",
+      "link": "https://donaldtrump-coder.github.io/",
+      "avatar": "https://donaldtrump-coder.github.io/images/original.jpg"
+    }
+  ]
+}
