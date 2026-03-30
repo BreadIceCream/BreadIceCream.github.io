@@ -411,7 +411,7 @@ h2 {
 .pixel-sprite {
   width: 100%;
   height: 100%;
-  background-image: url('./pixel-life-sprite.png');
+  background-image: url('./data/pixel-life-sprite.png');
   background-repeat: no-repeat;
   /* 整张图 = 3列×2行，background-size 宽=300% 高=200% 让每帧刚好填满容器 */
   background-size: 300% 200%;
